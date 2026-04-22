@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    background: black;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #e60000;
+}
+
+.logo-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-header img {
+    width: 50px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e60000;
+}
+
+/* SECCIÓN */
+.miembros {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.miembros h2 {
+    color: #e60000;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* TARJETAS */
+.card {
+    background: #111;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #e60000;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(230, 0, 0, 0.5);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #e60000;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #e60000;
+}
