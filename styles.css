@@ -98,3 +98,61 @@ footer {
     text-align: center;
     border-top: 2px solid #e60000;
 }
+
+
+.hero {
+    background: #0d0d0d;
+    padding: 80px 40px;
+}
+
+/* CONTENIDO PRINCIPAL */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* TEXTO */
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    color: white;
+}
+
+.hero-text h2 {
+    font-size: 3em;
+    color: #e60000;
+}
+
+.hero-text p {
+    margin-top: 15px;
+    color: #ccc;
+}
+
+/* IMAGEN */
+.hero-image img {
+    width: 300px;
+}
+
+/* ESTADÍSTICAS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.stats h3 {
+    font-size: 2.5em;
+    color: #e60000;
+}
+
+.stats p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #aaa;
+}
