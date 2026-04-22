@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    background: black;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #e60000;
+}
+
+.logo-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-header img {
+    width: 50px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e60000;
+}
+
+/* HERO */
+.club-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(black, #111);
+}
+
+.club-hero h1 {
+    font-size: 3em;
+    color: #e60000;
+}
+
+.club-hero p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* INFO */
+.club-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 40px;
+    flex-wrap: wrap;
+}
+
+.club-info .text {
+    max-width: 600px;
+}
+
+.club-info h2 {
+    color: #e60000;
+    margin-top: 20px;
+}
+
+.club-info p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.club-info .image img {
+    width: 300px;
+    filter: drop-shadow(0 0 15px red);
+}
+
+/* VALORES */
+.valores {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.valores h2 {
+    color: #e60000;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    border: 1px solid #e60000;
+    border-radius: 10px;
+    width: 150px;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #e60000;
+}
