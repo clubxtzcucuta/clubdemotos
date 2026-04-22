@@ -26,6 +26,8 @@ header {
 
 header h1 {
     color: #e60000;
+    font-size: 3em;
+    letter-spacing: 3px;
 }
 
 nav a {
