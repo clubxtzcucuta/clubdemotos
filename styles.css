@@ -5,9 +5,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: #111;
     color: #fff;
+}
+
+/* TITULOS MOTEROS */
+h1, h2, h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
 }
 
 /* HEADER */
