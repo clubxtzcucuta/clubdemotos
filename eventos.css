@@ -213,3 +213,38 @@ footer {
     opacity: 0.6;
     border-style: dashed;
 }
+/* CONTADOR */
+.contador {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.contador h3 {
+    color: #e60000;
+    margin-bottom: 20px;
+}
+
+.tiempo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tiempo div {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e60000;
+    width: 80px;
+}
+
+.tiempo span {
+    font-size: 2em;
+    color: #e60000;
+    display: block;
+}
+
+.tiempo p {
+    font-size: 0.8em;
+    color: #ccc;
+}
