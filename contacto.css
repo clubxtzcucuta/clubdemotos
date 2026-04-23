@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    background: black;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #e60000;
+}
+
+.logo-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-header img {
+    width: 50px;
+}
+
+/* NAV */
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e60000;
+}
+
+/* SECCIÓN */
+.contacto {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.contacto h2 {
+    color: #e60000;
+    font-size: 2.5em;
+}
+
+.contacto p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* BOTÓN WHATSAPP */
+.btn-whatsapp {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 25px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background: #1ebe5d;
+    transform: scale(1.05);
+}
+
+/* REDES */
+.redes {
+    margin-top: 60px;
+}
+
+.logo-small {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* ICONOS */
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icons img {
+    width: 40px;
+    transition: 0.3s;
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+}
