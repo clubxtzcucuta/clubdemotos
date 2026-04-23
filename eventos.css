@@ -158,3 +158,58 @@ footer {
     transform: scale(1.2);
     box-shadow: 0 0 15px rgba(230, 0, 0, 0.7);
 }
+
+
+/* SECCIÓN CAMPEONES */
+.campeones {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.campeones h2 {
+    color: #e60000;
+    font-size: 2.5em;
+}
+
+.campeones p {
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+/* GRID 3x3 */
+.grid-campeones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* TARJETAS */
+.card-campeon {
+    background: #111;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #e60000;
+    transition: 0.3s;
+}
+
+.card-campeon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(230, 0, 0, 0.5);
+}
+
+.card-campeon h3 {
+    color: #e60000;
+    font-size: 2em;
+}
+
+/* DESTACADO (2026) */
+.destacado {
+    border: 2px solid gold;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+/* FUTURO */
+.futuro {
+    opacity: 0.6;
+    border-style: dashed;
+}
