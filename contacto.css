@@ -122,3 +122,11 @@ nav a:hover {
 .icons img:hover {
     transform: scale(1.2);
 }
+
+/* FOOTER */
+footer {
+    background: black;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #e60000;
+}
