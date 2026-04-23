@@ -66,11 +66,15 @@
 </section>
 
 <section id="club">
-    <h2>Sobre el Club</h2>
-    <p>
-        CLUB XTZ CÚCUTA es más que un grupo de motos, es una familia que comparte respeto, pasión
-        y el compromiso de crecer juntos en cada rodada.
-    </p>
+  <div class="contador">
+    <h3>Revelación del Campeón 2026</h3>
+    <div class="tiempo">
+        <div><span id="dias">00</span><p>Días</p></div>
+        <div><span id="horas">00</span><p>Horas</p></div>
+        <div><span id="minutos">00</span><p>Min</p></div>
+        <div><span id="segundos">00</span><p>Seg</p></div>
+    </div>
+</div>
 </section>
 
 <section id="miembros">
@@ -117,6 +121,32 @@
 <footer>
     <p>© 2026 CLUB XTZ CÚCUTA</p>
 </footer>
+    
+<script>
+const fechaEvento = new Date("April 26, 2026 08:00:00").getTime();
 
+const contador = setInterval(() => {
+
+    const ahora = new Date().getTime();
+    const diferencia = fechaEvento - ahora;
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+    const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+    const segundos = Math.floor((diferencia / 1000) % 60);
+
+    document.getElementById("dias").innerText = dias;
+    document.getElementById("horas").innerText = horas;
+    document.getElementById("minutos").innerText = minutos;
+    document.getElementById("segundos").innerText = segundos;
+
+    if (diferencia < 0) {
+        clearInterval(contador);
+        document.querySelector(".contador").innerHTML = "<h2>🔥 CAMPEÓN REVELADO 🔥</h2>";
+    }
+
+}, 1000);
+</script>
+    
 </body>
 </html>
