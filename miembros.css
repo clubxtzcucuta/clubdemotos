@@ -1113,3 +1113,20 @@
     padding: 20px;
   }
 }
+
+.member-profile-number {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  max-width: calc(100% - 48px);
+  padding: 8px 12px;
+  background: #c8102e;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
