@@ -327,70 +327,43 @@
    <!-- =====================================
      HISTORIAL DE NUESTRAS AVENTURAS
 ===================================== -->
+
 <section class="events-history-section" id="historial-eventos">
-
-  <div class="events-container">
-
-    <div class="events-section-heading">
-      <span class="events-eyebrow">NUESTRA HISTORIA SOBRE RUEDAS</span>
-      <h2>HISTORIAL DE <span>NUESTRAS AVENTURAS</span></h2>
-      <p>
-        Cada rodada tiene una historia que merece ser recordada.
-        Descubre nuestros destinos, kilómetros recorridos,
-        experiencias y los momentos que nos unen como familia.
-      </p>
-    </div>
-
-    <div class="adventure-summary">
-      <div class="adventure-summary-item">
-        <i class="fa-solid fa-route"></i>
-        <div>
-          <strong id="totalAventuras">0</strong>
-          <span>AVENTURAS REGISTRADAS</span>
-        </div>
-      </div>
-
-      <div class="adventure-summary-item">
-        <i class="fa-solid fa-road"></i>
-        <div>
-          <strong id="totalKilometros">0 km</strong>
-          <span>KILÓMETROS REGISTRADOS</span>
-        </div>
-      </div>
-
-      <div class="adventure-summary-item">
-        <i class="fa-solid fa-map-location-dot"></i>
-        <div>
-          <strong id="totalDestinos">0</strong>
-          <span>DESTINOS VISITADOS</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="adventure-timeline" id="adventureTimeline">
-
-      <!-- Las aventuras se generan automáticamente con JavaScript -->
-
-    </div>
-
-    <div class="adventure-empty" id="adventureEmpty" hidden>
-      <i class="fa-solid fa-motorcycle"></i>
-      <h3>PRÓXIMAMENTE MÁS AVENTURAS</h3>
-      <p>
-        Estamos preparando el registro de nuestras rodadas
-        para compartir contigo cada kilómetro de nuestra historia.
-      </p>
-    </div>
-
-    <p class="adventure-disclaimer">
-      <i class="fa-solid fa-circle-info"></i>
-      Los recorridos, las fechas, los kilómetros y las fotografías
-      deben corresponder a las aventuras reales del CLUB XTZ CÚCUTA.
-    </p>
-
+  <div class="events-section-heading">
+    <span class="events-eyebrow">NUESTRA HISTORIA SOBRE DOS RUEDAS</span>
+    <h2>Recuerdos de nuestras aventuras</h2>
+    <p>Cada rodada deja una historia, un destino y kilómetros compartidos.</p>
   </div>
 
+  <div class="adventure-summary">
+    <article class="adventure-summary-card">
+      <i class="fa-solid fa-motorcycle"></i>
+      <span id="totalAventuras">0</span>
+      <p>Rodadas realizadas</p>
+    </article>
+
+    <article class="adventure-summary-card">
+      <i class="fa-solid fa-road"></i>
+      <span id="totalKilometros">0 km</span>
+      <p>Kilómetros recorridos</p>
+    </article>
+
+    <article class="adventure-summary-card">
+      <i class="fa-solid fa-location-dot"></i>
+      <span id="totalDestinos">0</span>
+      <p>Destinos visitados</p>
+    </article>
+  </div>
+
+  <div id="adventureTimeline" class="adventure-grid"></div>
+
+  <div id="adventureEmpty" class="adventure-empty" hidden>
+    <i class="fa-solid fa-route"></i>
+    <h3>Próximamente, más aventuras</h3>
+    <p>Estamos organizando los recuerdos de nuestras rodadas para compartirlos con toda la familia XTZ.</p>
+  </div>
 </section>
+
     
     <!-- =====================================
          GALERÍA
@@ -702,327 +675,260 @@
      HISTORIAL DE RODADAS XTZ
   ===================================== */
 
-  const historialAventuras = [
-    {
-      nombre: "rodada 1",
-      fecha: "2023-05-15",
-      destino: "cacota",
-      origen: "Cucuta",
-      destinoMapa: "https://maps.app.goo.gl/vuLVET8HVMZ9QpxR9",
-      kilometros: 105,
-      duracion: "9 horas",
-      participantes: "30",
-      descripcion:
-        "Escribe aquí cómo fue la aventura, qué lugares visitaron y qué hizo especial esta rodada.",
-      momentos: [
-        "pamplona",
-        "la laguna",
-        "comtemprar la laguna"
-      ],
-      fotos: [
-        "evento1.jpg",
-        "evento2.jpg",
-        "evento3.jpg"
-      ]
-    },
+  
+/*
+  HISTORIAL DE RODADAS DEL CLUB XTZ CÚCUTA
 
-    {
-      nombre: "Otra aventura del club",
-      fecha: "",
-      destino: "Destino por confirmar",
-      origen: "",
-      destinoMapa: "",
-      kilometros: 0,
-      duracion: "Por confirmar",
-      participantes: "Por confirmar",
-      descripcion:
-        "Agrega una descripción de esta rodada y los recuerdos más importantes del viaje.",
-      momentos: [
-        "Parada durante el recorrido",
-        "Encuentro con otros moteros",
-        "Regreso de la familia XTZ"
-      ],
-      fotos: [
-        "evento2.jpg",
-        "evento3.jpg",
-        "evento4.jpg"
-      ]
-    },
+  Agrega una entrada por cada rodada real.
+  No inventes fechas ni kilómetros.
+  El mapa muestra una ubicación o un recorrido según los datos.
+*/
 
-    {
-      nombre: "Una ruta para recordar",
-      fecha: "",
-      destino: "Destino por confirmar",
-      origen: "",
-      destinoMapa: "",
-      kilometros: 0,
-      duracion: "Por confirmar",
-      participantes: "Por confirmar",
-      descripcion:
-        "Cuenta aquí la historia de esta aventura, los kilómetros recorridos y los momentos vividos.",
-      momentos: [
-        "Salida del grupo",
-        "Paisajes del recorrido",
-        "Experiencia de hermandad"
-      ],
-      fotos: [
-        "evento3.jpg",
-        "evento4.jpg",
-        "evento5.jpg"
-      ]
-    }
-  ];
-
-  /* =====================================
-     GENERAR EL HISTORIAL
-  ===================================== */
-
-  const adventureTimeline = document.getElementById("adventureTimeline");
-  const adventureEmpty = document.getElementById("adventureEmpty");
-
-  const totalAventuras = document.getElementById("totalAventuras");
-  const totalKilometros = document.getElementById("totalKilometros");
-  const totalDestinos = document.getElementById("totalDestinos");
-
-  function escaparHTML(valor) {
-    return String(valor ?? "").replace(/[&<>"']/g, function (caracter) {
-      const entidades = {
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;",
-        "'": "&#39;"
-      };
-
-      return entidades[caracter];
-    });
+const historialAventuras = [
+  {
+    nombre: "Nombre de la primera rodada",
+    fecha: "", // Formato: AAAA-MM-DD
+    destino: "Nombre del destino",
+    origen: "Cúcuta, Norte de Santander, Colombia",
+    kilometros: 0,
+    duracion: "Por confirmar",
+    participantes: 0,
+    descripcion: "Describe brevemente la experiencia de esta rodada.",
+    momentos: [
+      "Momento destacado de la rodada",
+      "Lugar o experiencia importante"
+    ],
+    fotos: [
+      "evento1.jpg",
+      "evento2.jpg",
+      "evento3.jpg"
+    ]
   }
 
-  function fechaLegible(fecha) {
-    if (!fecha) return "Fecha por confirmar";
+  /*
+  Para añadir otra rodada, copia el bloque anterior,
+  separa cada objeto con una coma y completa los datos reales.
+  */
+];
 
-    const partes = fecha.split("-");
+function escaparHTML(valor) {
+  return String(valor ?? "").replace(/[&<>"']/g, caracter => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  })[caracter]);
+}
 
-    if (partes.length !== 3) return "Fecha por confirmar";
+function fechaLegible(fecha) {
+  if (!fecha) return "Fecha por confirmar";
 
-    const fechaLocal = new Date(
-      Number(partes[0]),
-      Number(partes[1]) - 1,
-      Number(partes[2])
-    );
-
-    if (Number.isNaN(fechaLocal.getTime())) {
-      return "Fecha por confirmar";
-    }
-
-    return fechaLocal.toLocaleDateString("es-CO", {
-      day: "numeric",
-      month: "long",
-      year: "numeric"
-    });
+  const partes = fecha.split("-").map(Number);
+  if (partes.length !== 3 || partes.some(n => !n)) {
+    return "Fecha por confirmar";
   }
 
-  function mapaDeAventura(aventura) {
-    if (!aventura.origen || !aventura.destinoMapa) {
-      return `
-        <div class="adventure-map-placeholder">
-          <i class="fa-solid fa-map-location-dot"></i>
-          <h4>RECORRIDO POR CONFIGURAR</h4>
-          <p>
-            Cuando registres el punto de salida y el destino,
-            aquí aparecerá la vista previa del mapa.
-          </p>
-        </div>
-      `;
-    }
+  const fechaLocal = new Date(partes[0], partes[1] - 1, partes[2]);
 
-    const origen = encodeURIComponent(aventura.origen);
-    const destino = encodeURIComponent(aventura.destinoMapa);
+  return fechaLocal.toLocaleDateString("es-CO", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
+}
 
-    const urlMapa =
-      "https://maps.google.com/maps?saddr=" +
-      origen +
+function esRodadaRegistrada(rodada) {
+  return Boolean(
+    rodada.nombre &&
+    rodada.destino &&
+    !rodada.nombre.toLowerCase().includes("nombre de la")
+  );
+}
+
+function crearURLMapa(rodada) {
+  const origen = (rodada.origen || "").trim();
+  const destino = (rodada.destino || "").trim();
+
+  if (origen && destino) {
+    return "https://maps.google.com/maps?output=embed&saddr=" +
+      encodeURIComponent(origen) +
       "&daddr=" +
-      destino +
+      encodeURIComponent(destino);
+  }
+
+  if (destino && destino.toLowerCase() !== "destino por confirmar") {
+    return "https://maps.google.com/maps?q=" +
+      encodeURIComponent(destino) +
       "&output=embed";
+  }
 
-    const urlIndicaciones =
-      "https://www.google.com/maps/dir/" +
-      origen +
-      "/" +
-      destino;
+  return "";
+}
 
-    return `
-      <div class="adventure-map-frame">
-        <iframe
-          src="${urlMapa}"
-          title="Mapa del recorrido: ${escaparHTML(aventura.nombre)}"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
-        </iframe>
+function crearEnlaceGoogleMaps(rodada) {
+  const origen = (rodada.origen || "").trim();
+  const destino = (rodada.destino || "").trim();
+
+  if (origen && destino) {
+    return "https://www.google.com/maps/dir/" +
+      encodeURIComponent(origen) + "/" +
+      encodeURIComponent(destino);
+  }
+
+  if (destino && destino.toLowerCase() !== "destino por confirmar") {
+    return "https://www.google.com/maps/search/?api=1&query=" +
+      encodeURIComponent(destino);
+  }
+
+  return "";
+}
+
+function renderizarAventuras() {
+  const contenedor = document.getElementById("adventureTimeline");
+  const mensajeVacio = document.getElementById("adventureEmpty");
+
+  if (!contenedor || !mensajeVacio) return;
+
+  const rodadas = historialAventuras.filter(esRodadaRegistrada);
+
+  const kilometrosTotales = rodadas.reduce((total, rodada) => {
+    const km = Number(rodada.kilometros);
+    return total + (Number.isFinite(km) && km > 0 ? km : 0);
+  }, 0);
+
+  const destinos = new Set(
+    rodadas
+      .map(rodada => (rodada.destino || "").trim().toLowerCase())
+      .filter(Boolean)
+  );
+
+  document.getElementById("totalAventuras").textContent = rodadas.length;
+  document.getElementById("totalKilometros").textContent =
+    kilometrosTotales.toLocaleString("es-CO") + " km";
+  document.getElementById("totalDestinos").textContent = destinos.size;
+
+  mensajeVacio.hidden = rodadas.length > 0;
+  contenedor.innerHTML = "";
+
+  rodadas.forEach(rodada => {
+    const mapa = crearURLMapa(rodada);
+    const enlaceMapa = crearEnlaceGoogleMaps(rodada);
+
+    const fotos = (rodada.fotos || [])
+      .filter(Boolean)
+      .slice(0, 3);
+
+    const momentos = (rodada.momentos || [])
+      .filter(Boolean);
+
+    const tarjeta = document.createElement("article");
+    tarjeta.className = "adventure-card";
+
+    tarjeta.innerHTML = `
+      <div class="adventure-card-header">
+        <span class="adventure-date">
+          <i class="fa-regular fa-calendar"></i>
+          ${escaparHTML(fechaLegible(rodada.fecha))}
+        </span>
+        <span class="adventure-tag">
+          <i class="fa-solid fa-motorcycle"></i> Rodada XTZ
+        </span>
       </div>
 
-      <a
-        class="adventure-map-link"
-        href="${urlIndicaciones}"
-        target="_blank"
-        rel="noopener noreferrer">
-        <i class="fa-solid fa-diamond-turn-right"></i>
-        VER RECORRIDO EN GOOGLE MAPS
-      </a>
-    `;
-  }
+      <div class="adventure-card-content">
+        <h3>${escaparHTML(rodada.nombre)}</h3>
 
-  function renderizarAventuras() {
-    const aventurasOrdenadas = [...historialAventuras].sort((a, b) => {
-      return (b.fecha || "").localeCompare(a.fecha || "");
-    });
+        <p class="adventure-destination">
+          <i class="fa-solid fa-location-dot"></i>
+          ${escaparHTML(rodada.destino)}
+        </p>
 
-    const aventurasConDatos = aventurasOrdenadas.filter((aventura) => {
-      return aventura.nombre &&
-        aventura.nombre !== "Nombre de la rodada" &&
-        aventura.nombre !== "Otra aventura del club" &&
-        aventura.nombre !== "Una ruta para recordar";
-    });
+        <div class="adventure-stats">
+          <div>
+            <strong>${Number(rodada.kilometros) > 0
+              ? Number(rodada.kilometros).toLocaleString("es-CO") + " km"
+              : "Por confirmar"}</strong>
+            <span>Distancia</span>
+          </div>
 
-    const kilometrosAcumulados = aventurasConDatos.reduce((total, aventura) => {
-      return total + (Number(aventura.kilometros) || 0);
-    }, 0);
+          <div>
+            <strong>${escaparHTML(rodada.duracion || "Por confirmar")}</strong>
+            <span>Duración</span>
+          </div>
 
-    const destinosRegistrados = new Set(
-      aventurasConDatos
-        .map((aventura) => aventura.destino)
-        .filter((destino) =>
-          destino && destino !== "Destino por confirmar"
-        )
-    );
+          <div>
+            <strong>${Number(rodada.participantes) > 0
+              ? Number(rodada.participantes)
+              : "Por confirmar"}</strong>
+            <span>Pilotos</span>
+          </div>
+        </div>
 
-    totalAventuras.textContent = aventurasConDatos.length;
-    totalKilometros.textContent =
-      kilometrosAcumulados.toLocaleString("es-CO") + " km";
-    totalDestinos.textContent = destinosRegistrados.size;
+        <p class="adventure-description">
+          ${escaparHTML(rodada.descripcion || "")}
+        </p>
 
-    if (aventurasConDatos.length === 0) {
-      adventureTimeline.innerHTML = "";
-      adventureEmpty.hidden = false;
-      return;
-    }
+        ${momentos.length ? `
+          <div class="adventure-highlights">
+            <h4><i class="fa-solid fa-flag-checkered"></i> Momentos destacados</h4>
+            <ul>
+              ${momentos.map(momento =>
+                `<li>${escaparHTML(momento)}</li>`
+              ).join("")}
+            </ul>
+          </div>
+        ` : ""}
 
-    adventureEmpty.hidden = true;
-
-    adventureTimeline.innerHTML = aventurasConDatos.map((aventura, indice) => {
-      const fotos = (aventura.fotos || []).filter(Boolean).slice(0, 3);
-
-      const galeria = fotos.length
-        ? `
+        ${fotos.length ? `
           <div class="adventure-photo-grid">
-            ${fotos.map((foto, fotoIndice) => `
-              <div class="adventure-photo">
-                <img
-                  src="${escaparHTML(foto)}"
-                  alt="${escaparHTML(aventura.nombre)} - fotografía ${fotoIndice + 1}"
-                  loading="lazy"
-                  onerror="this.onerror=null; this.src='XTZ.png'; this.classList.add('adventure-photo-fallback');"
-                >
-              </div>
+            ${fotos.map(foto => `
+              <img
+                src="${escaparHTML(foto)}"
+                alt="Fotografía de ${escaparHTML(rodada.nombre)}"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              >
             `).join("")}
           </div>
-        `
-        : "";
+        ` : ""}
 
-      const momentos = (aventura.momentos || []).filter(Boolean);
+        <div class="adventure-map-section">
+          <h4><i class="fa-solid fa-map-location-dot"></i> Mapa del recorrido</h4>
 
-      return `
-        <article class="adventure-card">
+          ${mapa ? `
+            <iframe
+              src="${escaparHTML(mapa)}"
+              title="Mapa de ${escaparHTML(rodada.nombre)}"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
 
-          <div class="adventure-card-top">
-            <span class="adventure-number">
-              AVENTURA ${String(indice + 1).padStart(2, "0")}
-            </span>
-
-            <span class="adventure-date">
-              <i class="fa-regular fa-calendar"></i>
-              ${escaparHTML(fechaLegible(aventura.fecha))}
-            </span>
-          </div>
-
-          <div class="adventure-card-heading">
-            <h3>${escaparHTML(aventura.nombre)}</h3>
-
-            <div class="adventure-destination">
-              <i class="fa-solid fa-location-dot"></i>
-              ${escaparHTML(aventura.destino)}
-            </div>
-          </div>
-
-          <div class="adventure-stats">
-            <div class="adventure-stat">
-              <i class="fa-solid fa-road"></i>
-              <span>
-                <strong>${Number(aventura.kilometros || 0).toLocaleString("es-CO")} km</strong>
-                <small>KILÓMETROS</small>
-              </span>
-            </div>
-
-            <div class="adventure-stat">
-              <i class="fa-solid fa-clock"></i>
-              <span>
-                <strong>${escaparHTML(aventura.duracion || "Por confirmar")}</strong>
-                <small>DURACIÓN</small>
-              </span>
-            </div>
-
-            <div class="adventure-stat">
-              <i class="fa-solid fa-users"></i>
-              <span>
-                <strong>${escaparHTML(aventura.participantes || "Por confirmar")}</strong>
-                <small>PARTICIPANTES</small>
-              </span>
-            </div>
-          </div>
-
-          <div class="adventure-description">
-            <h4>LA HISTORIA DE ESTA RODADA</h4>
-            <p>${escaparHTML(aventura.descripcion)}</p>
-          </div>
-
-          ${momentos.length ? `
-            <div class="adventure-highlights">
-              <h4>
-                <i class="fa-solid fa-flag-checkered"></i>
-                MOMENTOS DESTACADOS
-              </h4>
-
-              <ul>
-                ${momentos.map((momento) => `
-                  <li>
-                    <i class="fa-solid fa-check"></i>
-                    ${escaparHTML(momento)}
-                  </li>
-                `).join("")}
-              </ul>
-            </div>
-          ` : ""}
-
-          ${galeria}
-
-          <div class="adventure-map-section">
-            <h4>
+            <a
+              class="adventure-map-link"
+              href="${escaparHTML(enlaceMapa)}"
+              target="_blank"
+              rel="noopener noreferrer">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+              Ver recorrido en Google Maps
+            </a>
+          ` : `
+            <div class="adventure-map-placeholder">
               <i class="fa-solid fa-map-location-dot"></i>
-              MAPA DEL RECORRIDO
-            </h4>
+              <p>Agrega el destino real para mostrar su ubicación en el mapa.</p>
+            </div>
+          `}
+        </div>
+      </div>
+    `;
 
-            ${mapaDeAventura(aventura)}
-          </div>
+    contenedor.appendChild(tarjeta);
+  });
+}
 
-        </article>
-      `;
-    }).join("");
-  }
+document.addEventListener("DOMContentLoaded", renderizarAventuras);
 
-  renderizarAventuras();
-</script>
 
 </body>
 </html>
