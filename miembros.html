@@ -435,187 +435,163 @@
   </footer>
 
   <!-- ================= FUNCIONES DE LA PÁGINA ================= -->
- 
-const miembrosData = [
-  { nombre: "Miembro 01", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 02", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 03", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 04", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 05", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 06", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 07", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 08", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 09", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 10", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 11", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 12", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 13", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 14", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 15", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 16", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 17", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 18", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 19", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 20", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 21", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 22", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 23", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 24", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 25", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 26", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 27", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 28", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 29", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
-  { nombre: "Miembro 30", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" }
-];
+ <script>
+      /* =====================================
+         MENÚ PARA DISPOSITIVOS MÓVILES
+      ===================================== */
+      const menuToggle = document.getElementById("menuToggle");
+      const mainNav = document.getElementById("mainNav");
 
-const membersGrid = document.getElementById("membersDirectoryGrid");
-const memberSearch = document.getElementById("memberSearch");
-const membersTotal = document.getElementById("membersTotal");
-const membersNoResults = document.getElementById("membersNoResults");
+      if (menuToggle && mainNav) {
+        menuToggle.addEventListener("click", function () {
+          const abierto = mainNav.classList.toggle("nav-open");
 
-function mostrarMiembros(busqueda = "") {
-  const termino = busqueda.trim().toLowerCase();
-
-  const encontrados = miembrosData.filter((miembro) => {
-    const texto = [
-      miembro.nombre,
-      miembro.sangre,
-      miembro.profesion,
-      miembro.ingreso,
-      "miembro"
-    ].join(" ").toLowerCase();
-
-    return texto.includes(termino);
-  });
-
-  membersGrid.innerHTML = encontrados.map((miembro) => {
-    const numero = String(
-      miembrosData.indexOf(miembro) + 1
-    ).padStart(2, "0");
-
-    const foto = `images/miembro${numero}.jpg`;
-
-    return `
-      <article class="member-profile-card">
-        <div class="member-profile-photo">
-          <img
-            src="${foto}"
-            alt="Fotografía de ${miembro.nombre}"
-            loading="lazy"
-            onerror="this.onerror=null; this.src='images/XTZ.png'; this.classList.add('member-fallback-logo');"
-          >
-          <span class="member-profile-number">XTZ ${numero}</span>
-        </div>
-
-        <div class="member-profile-content">
-          <span class="member-profile-role">
-            <i class="fa-solid fa-motorcycle"></i> MIEMBRO
-          </span>
-
-          <h3>${miembro.nombre}</h3>
-
-          <div class="member-profile-detail">
-            <i class="fa-solid fa-droplet"></i>
-            <div>
-              <small>Tipo de sangre</small>
-              <p>${miembro.sangre}</p>
-            </div>
-          </div>
-
-          <div class="member-profile-detail">
-            <i class="fa-solid fa-briefcase"></i>
-            <div>
-              <small>Profesión</small>
-              <p>${miembro.profesion}</p>
-            </div>
-          </div>
-
-          <div class="member-profile-detail">
-            <i class="fa-solid fa-calendar-check"></i>
-            <div>
-              <small>Fecha de ingreso</small>
-              <p>${miembro.ingreso}</p>
-            </div>
-          </div>
-        </div>
-      </article>
-    `;
-  }).join("");
-
-  membersTotal.textContent =
-    `${encontrados.length} de ${miembrosData.length} miembros`;
-
-  membersNoResults.hidden = encontrados.length > 0;
-  membersGrid.hidden = encontrados.length === 0;
-}
-
-memberSearch.addEventListener("input", (evento) => {
-  mostrarMiembros(evento.target.value);
-});
-
-mostrarMiembros();
-
-
-    // Búsqueda y filtros del directorio
-    const memberSearch = document.getElementById("memberSearch");
-    const filterButtons = document.querySelectorAll(".members-filter");
-    const directoryCards = document.querySelectorAll(".members-person-card");
-    const directoryGrid = document.getElementById("membersDirectoryGrid");
-    const noResults = document.getElementById("membersNoResults");
-
-    let currentFilter = "todos";
-
-    function filterMembers() {
-      const query = memberSearch.value.trim().toLowerCase();
-      let visibleCount = 0;
-
-      directoryCards.forEach((card) => {
-        const category = card.dataset.category || "";
-        const searchData = (
-          card.dataset.search + " " + card.textContent
-        ).toLowerCase();
-
-        const matchesFilter =
-          currentFilter === "todos" || category === currentFilter;
-
-        const matchesSearch = searchData.includes(query);
-        const visible = matchesFilter && matchesSearch;
-
-        card.hidden = !visible;
-
-        if (visible) {
-          visibleCount++;
-        }
-      });
-
-      noResults.hidden = visibleCount !== 0;
-      directoryGrid.hidden = visibleCount === 0;
-    }
-
-    if (memberSearch) {
-      memberSearch.addEventListener("input", filterMembers);
-    }
-
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        currentFilter = button.dataset.filter;
-
-        filterButtons.forEach((item) => {
-          const isActive = item === button;
-          item.classList.toggle("active", isActive);
-          item.setAttribute("aria-pressed", String(isActive));
+          menuToggle.setAttribute("aria-expanded", abierto);
+          menuToggle.innerHTML = abierto
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
         });
 
-        filterMembers();
-      });
-    });
+        mainNav.querySelectorAll("a").forEach(function (enlace) {
+          enlace.addEventListener("click", function () {
+            mainNav.classList.remove("nav-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.innerHTML =
+              '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
 
-    // Estado inicial
-    if (memberSearch) {
-      filterMembers();
-    }
-  </script>
+      /* =====================================
+         INFORMACIÓN DE LOS 30 MIEMBROS
+      ===================================== */
+      const miembrosData = [
+        { nombre: "Miembro 01", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 02", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 03", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 04", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 05", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 06", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 07", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 08", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 09", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 10", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 11", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 12", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 13", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 14", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 15", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 16", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 17", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 18", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 19", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 20", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 21", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 22", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 23", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 24", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 25", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 26", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 27", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 28", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 29", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
+        { nombre: "Miembro 30", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" }
+      ];
 
-</body>
+      /* =====================================
+         MOSTRAR LAS TARJETAS DE LOS MIEMBROS
+      ===================================== */
+      const membersGrid = document.getElementById("membersDirectoryGrid");
+      const memberSearch = document.getElementById("memberSearch");
+      const membersTotal = document.getElementById("membersTotal");
+      const membersNoResults = document.getElementById("membersNoResults");
+
+      function mostrarMiembros(busqueda = "") {
+        if (!membersGrid || !memberSearch || !membersTotal || !membersNoResults) {
+          return;
+        }
+
+        const termino = busqueda.trim().toLowerCase();
+
+        const encontrados = miembrosData.filter(function (miembro) {
+          const texto = [
+            miembro.nombre,
+            miembro.sangre,
+            miembro.profesion,
+            miembro.ingreso,
+            "miembro"
+          ].join(" ").toLowerCase();
+
+          return texto.includes(termino);
+        });
+
+        membersGrid.innerHTML = encontrados.map(function (miembro) {
+          const indice = miembrosData.indexOf(miembro) + 1;
+          const numero = String(indice).padStart(2, "0");
+          const foto = "images/miembro" + indice + ".jpg";
+
+          return `
+            <article class="member-profile-card">
+              <div class="member-profile-photo">
+                <img
+                  src="${foto}"
+                  alt="Fotografía de ${miembro.nombre}"
+                  loading="lazy"
+                  onerror="this.onerror=null; this.src='images/XTZ.png'; this.classList.add('member-fallback-logo');"
+                >
+                <span class="member-profile-number">XTZ ${numero}</span>
+              </div>
+
+              <div class="member-profile-content">
+                <span class="member-profile-role">
+                  <i class="fa-solid fa-motorcycle"></i>
+                  MIEMBRO
+                </span>
+
+                <h3>${miembro.nombre}</h3>
+
+                <div class="member-profile-detail">
+                  <i class="fa-solid fa-droplet"></i>
+                  <div>
+                    <small>Tipo de sangre</small>
+                    <p>${miembro.sangre}</p>
+                  </div>
+                </div>
+
+                <div class="member-profile-detail">
+                  <i class="fa-solid fa-briefcase"></i>
+                  <div>
+                    <small>Profesión</small>
+                    <p>${miembro.profesion}</p>
+                  </div>
+                </div>
+
+                <div class="member-profile-detail">
+                  <i class="fa-solid fa-calendar-check"></i>
+                  <div>
+                    <small>Fecha de ingreso</small>
+                    <p>${miembro.ingreso}</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join("");
+
+        membersTotal.textContent =
+          encontrados.length + " de " + miembrosData.length + " miembros";
+
+        membersNoResults.hidden = encontrados.length > 0;
+        membersGrid.hidden = encontrados.length === 0;
+      }
+
+      if (memberSearch) {
+        memberSearch.addEventListener("input", function (evento) {
+          mostrarMiembros(evento.target.value);
+        });
+      }
+
+      mostrarMiembros();
+    </script>
+  </body>
 </html>
