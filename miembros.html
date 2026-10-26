@@ -298,112 +298,51 @@
     </section>
 
     <!-- ================= DIRECTORIO GENERAL ================= -->
-    <section class="members-directory members-section" id="directorio-miembros">
-      <div class="container">
+    
+<section class="members-directory members-section" id="directorio-miembros">
+  <div class="members-section-heading">
+    <span class="members-eyebrow">NUESTRA FAMILIA</span>
+    <h2>DIRECTORIO DE <span>MIEMBROS</span></h2>
+    <p>
+      Conoce a los integrantes que forman parte de la familia
+      CLUB XTZ CÚCUTA.
+    </p>
+  </div>
 
-        <div class="members-section-heading">
-          <span class="members-eyebrow">Nuestro equipo</span>
-          <h2>DIRECTORIO DE <span>INTEGRANTES</span></h2>
-          <p>
-            Busca a los miembros registrados del club por nombre,
-            motocicleta o categoría.
-          </p>
-        </div>
+  <div class="members-directory-tools">
+    <div class="members-search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input
+        type="search"
+        id="memberSearch"
+        placeholder="Buscar por nombre, profesión o tipo de sangre..."
+        aria-label="Buscar miembros"
+      >
+    </div>
 
-        <div class="members-directory-tools">
-          <div class="members-search">
-            <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
-            <input
-              type="search"
-              id="memberSearch"
-              placeholder="Buscar por nombre, moto o cargo..."
-              aria-label="Buscar integrantes"
-            >
-          </div>
+    <span class="members-total" id="membersTotal">
+      30 miembros
+    </span>
+  </div>
 
-          <div class="members-filters" role="group" aria-label="Filtrar integrantes">
-            <button type="button" class="members-filter active" data-filter="todos" aria-pressed="true">
-              Todos
-            </button>
-            <button type="button" class="members-filter" data-filter="directiva" aria-pressed="false">
-              Directiva
-            </button>
-            <button type="button" class="members-filter" data-filter="miembro" aria-pressed="false">
-              Miembros
-            </button>
-          </div>
-        </div>
+  <div
+    class="members-directory-grid"
+    id="membersDirectoryGrid"
+    aria-live="polite"
+  ></div>
 
-        <div class="members-directory-grid" id="membersDirectoryGrid">
+  <div class="members-no-results" id="membersNoResults" hidden>
+    <i class="fa-solid fa-user-slash"></i>
+    <h3>No se encontraron miembros</h3>
+    <p>Intenta buscar con otro nombre o dato.</p>
+  </div>
 
-          <article class="members-person-card" data-category="miembro" data-search="miembro por confirmar yamaha xtz">
-            <div class="members-person-photo">
-              <img src="images/miembro1.jpg" alt="Fotografía de integrante del club" loading="lazy">
-              <span class="members-person-status">
-                <i class="fas fa-circle" aria-hidden="true"></i> Integrante
-              </span>
-            </div>
-            <div class="members-person-info">
-              <span class="members-person-label">Familia XTZ</span>
-              <h3>Nombre por confirmar</h3>
-              <p><i class="fas fa-motorcycle" aria-hidden="true"></i> Moto por confirmar</p>
-            </div>
-          </article>
-
-          <article class="members-person-card" data-category="miembro" data-search="miembro por confirmar yamaha xtz">
-            <div class="members-person-photo">
-              <img src="images/miembro2.jpg" alt="Fotografía de integrante del club" loading="lazy">
-              <span class="members-person-status">
-                <i class="fas fa-circle" aria-hidden="true"></i> Integrante
-              </span>
-            </div>
-            <div class="members-person-info">
-              <span class="members-person-label">Familia XTZ</span>
-              <h3>Nombre por confirmar</h3>
-              <p><i class="fas fa-motorcycle" aria-hidden="true"></i> Moto por confirmar</p>
-            </div>
-          </article>
-
-          <article class="members-person-card" data-category="miembro" data-search="miembro por confirmar yamaha xtz">
-            <div class="members-person-photo">
-              <img src="images/miembro3.jpg" alt="Fotografía de integrante del club" loading="lazy">
-              <span class="members-person-status">
-                <i class="fas fa-circle" aria-hidden="true"></i> Integrante
-              </span>
-            </div>
-
-            <article class="members-person-card" data-category="miembro" data-search="miembro por confirmar yamaha xtz">
-            <div class="members-person-photo">
-              <img src="images/miembro3.jpg" alt="Fotografía de integrante del club" loading="lazy">
-              <span class="members-person-status">
-                <i class="fas fa-circle" aria-hidden="true"></i> Integrante
-              </span>
-            </div>
-            
-            <div class="members-person-info">
-              <span class="members-person-label">Familia XTZ</span>
-              <h3>Nombre por confirmar</h3>
-              <p><i class="fas fa-motorcycle" aria-hidden="true"></i> Moto por confirmar</p>
-            </div>
-          </article>
-
-        </div>
-
-        <p class="members-no-results" id="membersNoResults" hidden>
-          No encontramos integrantes que coincidan con tu búsqueda.
-          Prueba con otro nombre o selecciona otra categoría.
-        </p>
-
-        <div class="members-directory-note">
-          <i class="fas fa-circle-info" aria-hidden="true"></i>
-          <p>
-            El directorio está en preparación. Los perfiles se completarán
-            con la información autorizada de cada integrante.
-          </p>
-        </div>
-
-      </div>
-    </section>
+  <p class="members-directory-note">
+    <i class="fa-solid fa-circle-info"></i>
+    Los datos que aparecen como “Por confirmar” deben actualizarse
+    con la información autorizada de cada integrante.
+  </p>
+</section>
 
     <!-- ================= INVITACIÓN ================= -->
     <section class="members-join">
