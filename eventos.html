@@ -1,211 +1,753 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos | CLUB XTZ CÚCUTA</title>
-    <link rel="stylesheet" href="eventos.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" href="XTZ.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rodadas y Eventos | CLUB XTZ CÚCUTA</title>
+  <meta
+    name="description"
+    content="Conoce las próximas rodadas, eventos, encuentros y aventuras del CLUB XTZ CÚCUTA."
+  >
+
+  <link rel="icon" type="image/png" href="XTZ.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- CSS global y CSS exclusivo de esta página -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="eventos.css">
 </head>
+
 <body>
 
-<header>
-    <div class="logo-header">
-        <img src="XTZ.png" alt="Logo" width="200" height="100">
-        <h1>CLUB XTZ CÚCUTA</h1>
-    </div>
+  <!-- =====================================
+       ENCABEZADO Y MENÚ PRINCIPAL
+  ====================================== -->
+  <header class="site-header">
+    <div class="header-inner">
 
-    <nav>
-       <a href="index.html">Inicio</a>
-        <a href="elclub.html">El Club</a>
-        <a href="miembros.html">Miembros</a>
-        <a href="eventos.html">Eventos</a>
-        <a href="Conctato.html">Contacto</a>
-    </nav>
-</header>
+      <a href="index.html" class="brand" aria-label="Inicio CLUB XTZ CÚCUTA">
+        <img src="XTZ.png" alt="Logo CLUB XTZ CÚCUTA">
+      </a>
 
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Abrir menú"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        type="button"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-<section class="campeones">
-
-    <h2>CAMPEONES DEL CLUB</h2>
-    <p>Reconocimiento a los pilotos más destacados de cada año</p>
-    <p>Señores un poco de historia en las válidas</p>
-<br>
-    <br>
-    <div class="grid-campeones">
-
-        <div class="card-campeon">
-            <img src="2022.jpeg" alt="VICTOR" width="200" height="200">
-            <h3>AÑO - 2022</h3>
-            <p><strong>Campeón:</strong> VICTOR</p>
-            <p><strong>Moto:</strong> Yamaha XTZ 150</p>
-           <p>2. LEONARD - D.E.P 🕊️</p>
-           <p>3. ELMER</p>
-        </div>
-
-        <div class="card-campeon">
-            <img src="2023.jpeg" alt="JESUS" width="200" height="200">
-            <h3>AÑO - 2023</h3>
-            <p><strong>Campeón:</strong> JESUS</p>
-            <p><strong>Moto:</strong> Yamaha XTZ 150</p>
-            <p>2. EDINSON</p>
-           <p>3. VICTOR</p>
-        </div>
-
-        <div class="card-campeon">
-            <img src="2024.jpeg" alt="EDINSON" width="200" height="200">
-            <h3>AÑO - 2024</h3>
-            <p><strong>Campeón:</strong> EDINSON</p>
-            <p><strong>Moto:</strong> Yamaha XTZ 125 - AVENTOR</p>
-            <p>2. RONALD</p>
-           <p>3. VICTOR</p>
-        </div>
-
-        <div class="card-campeon">
-            <img src="2025.jpeg" alt="DARWIN" width="200" height="200">
-            <h3>AÑO - 2025</h3>
-            <p><strong>Campeón:</strong> DARWIN</p>
-            <p><strong>Moto:</strong> Yamaha XTZ 150</p>
-            <p>2. RAFAEL</p>
-           <p>3. SEBASTIAN</p>
-        </div>
-
-
-       <!------- 2026 (ESPECIAL) <div class="contador">
-    <h3>Revelación del Campeón 2026</h3>
-    <div class="tiempo">
-        <div><span id="dias">00</span><p>Días</p></div>
-        <div><span id="horas">00</span><p>Horas</p></div>
-        <div><span id="minutos">00</span><p>Min</p></div>
-        <div><span id="segundos">00</span><p>Seg</p></div>
-    </div> ---------->
-        
-        <!-- 2026 (ESPECIAL) -->
-        <div class="card-campeon">
-            <img src="2026.jpeg" alt="EDOS" width="200" height="200">
-             <h3>AÑO - 2025</h3>
-            <p><strong>Campeón:</strong> EDINSON</p>
-            <p><strong>Moto:</strong> Yamaha XTZ 150 - AVENTOR </p>
-            <p>2. ANDRÉS</p>
-           <p>3. RONALD</p>
-        </div>
-
-        <!-- 2027 FUTURO -->
-        <div class="card-campeon futuro">
-            <h3>2027</h3>
-            <p>Próximo campeón</p>
-        </div>
+      <nav class="main-nav" id="mainNav" aria-label="Menú principal">
+        <a href="index.html">Inicio</a>
+        <a href="clubxtz.html">Club XTZ</a>
+        <a href="miembros.html">Familia XTZ</a>
+        <a href="eventos.html" class="active" aria-current="page">Rodadas y eventos</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
 
     </div>
+  </header>
 
-</section>
+
+  <main>
+
+    <!-- =====================================
+         PORTADA DE EVENTOS
+    ====================================== -->
+    <section class="events-hero">
+      <div class="events-hero-overlay"></div>
+
+      <div class="events-hero-content">
+        <span class="events-eyebrow">
+          <i class="fa-solid fa-motorcycle"></i>
+          RODAMOS JUNTOS, VIVIMOS LA PASIÓN
+        </span>
+
+        <h1>
+          RODADAS Y
+          <span>EVENTOS XTZ</span>
+        </h1>
+
+        <p>
+          Cada kilómetro cuenta una historia.
+          Cada rodada fortalece nuestra hermandad.
+          Somos una familia que vive la pasión por las dos ruedas.
+        </p>
+
+        <div class="events-hero-buttons">
+          <a href="#proxima-rodada" class="events-btn events-btn-primary">
+            <i class="fa-solid fa-calendar-days"></i>
+            Próxima rodada
+          </a>
+
+          <a href="#historial-eventos" class="events-btn events-btn-outline">
+            <i class="fa-solid fa-flag-checkered"></i>
+            Ver nuestras aventuras
+          </a>
+        </div>
+      </div>
+
+      <div class="events-hero-bottom">
+        <span>UNIÓN</span>
+        <span class="events-separator">•</span>
+        <span>RESPETO</span>
+        <span class="events-separator">•</span>
+        <span>HERMANDAD</span>
+        <span class="events-separator">•</span>
+        <span>LIBERTAD</span>
+      </div>
+    </section>
 
 
-    
-<section class="eventos">
-    <h2>RODADAS Y EVENTOS</h2>
-<h1>Rodas mas destacadas del 2022 al 2026</h1>
-    <div class="grid">
+    <!-- =====================================
+         INTRODUCCIÓN
+    ====================================== -->
+    <section class="events-intro events-container">
+      <div class="events-intro-text">
+        <span class="events-eyebrow">NUESTRA PASIÓN NO SE DETIENE</span>
 
-        
+        <h2>
+          EL CAMINO NOS UNE,
+          <span>LA HERMANDAD NOS MANTIENE</span>
+        </h2>
 
-        <!-- EVENTO -->
-        <div class="card">
-            <h3>Rodada a Pamplona</h3>
-            <p><strong>Fecha:</strong> 10 Mayo 2026</p>
-            <p><strong>Punto de salida:</strong> Cúcuta</p>
-            <p><strong>Distancia:</strong> 75 km</p>
+        <p>
+          En CLUB XTZ CÚCUTA, cada salida es una oportunidad para descubrir
+          nuevos lugares, compartir experiencias y crear recuerdos
+          inolvidables. No importa el destino: lo importante es rodar
+          juntos y regresar como una sola familia.
+        </p>
 
-            <!-- MAPA -->
-            <iframe 
-                src="https://www.google.com/maps?q=Pamplona,Norte+de+Santander&output=embed">
-            </iframe>
+        <a href="miembros.html" class="events-text-link">
+          CONOCE NUESTRA FAMILIA
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="events-intro-image">
+        <img
+          src="evento1.jpg"
+          alt="Rodada del CLUB XTZ CÚCUTA"
+          loading="lazy"
+          onerror="this.onerror=null; this.src='XTZ.png'; this.classList.add('events-image-fallback');"
+        >
+        <div class="events-image-caption">
+          <i class="fa-solid fa-route"></i>
+          UNA PASIÓN, MIL DESTINOS
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================
+         PRÓXIMA RODADA
+    ====================================== -->
+    <section class="next-event-section" id="proxima-rodada">
+      <div class="events-container">
+
+        <div class="events-section-heading">
+          <span class="events-eyebrow">PREPARA TU MOTO</span>
+          <h2>NUESTRA <span>PRÓXIMA RODADA</span></h2>
+          <p>
+            El próximo destino nos espera. Mantente atento a la información
+            oficial de nuestro club.
+          </p>
         </div>
 
-        <!-- EVENTO -->
-        <div class="card">
-            <h3>Ruta al Zulia</h3>
-            <p><strong>Fecha:</strong> 25 Mayo 2026</p>
-            <p><strong>Punto de salida:</strong> Cúcuta</p>
-            <p><strong>Distancia:</strong> 30 km</p>
+        <article class="next-event-card">
 
-            <iframe 
-                src="https://www.google.com/maps?q=El+Zulia,Norte+de+Santander&output=embed">
-            </iframe>
+          <div class="next-event-image">
+            <img
+              src="evento2.jpg"
+              alt="Próxima rodada del club"
+              loading="lazy"
+              onerror="this.onerror=null; this.src='XTZ.png'; this.classList.add('events-image-fallback');"
+            >
+
+            <span class="event-status">
+              <i class="fa-solid fa-bell"></i>
+              PRÓXIMAMENTE
+            </span>
+          </div>
+
+          <div class="next-event-content">
+            <span class="events-card-eyebrow">
+              <i class="fa-solid fa-motorcycle"></i>
+              CLUB XTZ CÚCUTA
+            </span>
+
+            <h3 id="nextEventName">Próxima rodada XTZ</h3>
+
+            <p class="next-event-description" id="nextEventDescription">
+              Estamos preparando nuestra próxima aventura.
+              Muy pronto compartiremos todos los detalles para que
+              nuestra familia motera se prepare.
+            </p>
+
+            <div class="next-event-details">
+              <div>
+                <i class="fa-solid fa-calendar-day"></i>
+                <span>
+                  <small>Fecha</small>
+                  <strong id="nextEventDate">Por confirmar</strong>
+                </span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>
+                  <small>Destino</small>
+                  <strong id="nextEventDestination">Por confirmar</strong>
+                </span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-clock"></i>
+                <span>
+                  <small>Hora de encuentro</small>
+                  <strong id="nextEventTime">Por confirmar</strong>
+                </span>
+              </div>
+            </div>
+
+            <div class="next-event-countdown" id="eventCountdown">
+              <div class="countdown-unit">
+                <strong>--</strong>
+                <span>DÍAS</span>
+              </div>
+              <div class="countdown-unit">
+                <strong>--</strong>
+                <span>HORAS</span>
+              </div>
+              <div class="countdown-unit">
+                <strong>--</strong>
+                <span>MINUTOS</span>
+              </div>
+              <div class="countdown-unit">
+                <strong>--</strong>
+                <span>SEGUNDOS</span>
+              </div>
+            </div>
+
+            <p class="countdown-note" id="countdownNote">
+              La fecha de la rodada será publicada por los canales oficiales.
+            </p>
+
+            <a href="contacto.html" class="events-btn events-btn-primary">
+              <i class="fa-brands fa-whatsapp"></i>
+              Consultar información
+            </a>
+          </div>
+
+        </article>
+      </div>
+    </section>
+
+
+    <!-- =====================================
+         TIPOS DE EVENTOS
+    ====================================== -->
+    <section class="events-types-section events-container">
+      <div class="events-section-heading">
+        <span class="events-eyebrow">MUCHO MÁS QUE UNA RODADA</span>
+        <h2>EXPERIENCIAS <span>QUE NOS UNEN</span></h2>
+        <p>
+          Compartimos la carretera, la amistad y el compromiso de crecer
+          juntos como familia motera.
+        </p>
+      </div>
+
+      <div class="events-types-grid">
+
+        <article class="event-type-card">
+          <div class="event-type-icon">
+            <i class="fa-solid fa-motorcycle"></i>
+          </div>
+          <h3>RODADAS</h3>
+          <p>
+            Recorremos nuevas rutas, conocemos lugares y compartimos
+            la emoción de rodar en grupo.
+          </p>
+        </article>
+
+        <article class="event-type-card">
+          <div class="event-type-icon">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <h3>ENCUENTROS MOTEROS</h3>
+          <p>
+            Nos reunimos con otros apasionados por las motos para
+            fortalecer la hermandad.
+          </p>
+        </article>
+
+        <article class="event-type-card">
+          <div class="event-type-icon">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3>INTEGRACIÓN</h3>
+          <p>
+            Creamos momentos especiales con nuestros miembros,
+            acompañantes y amigos del club.
+          </p>
+        </article>
+
+        <article class="event-type-card">
+          <div class="event-type-icon">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+          </div>
+          <h3>ACTIVIDADES SOLIDARIAS</h3>
+          <p>
+            Promovemos el compañerismo, la colaboración y el apoyo
+            cuando nuestra comunidad lo necesita.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================
+         HISTORIAL DE EVENTOS
+    ====================================== -->
+    <section class="events-history-section" id="historial-eventos">
+      <div class="events-container">
+
+        <div class="events-section-heading">
+          <span class="events-eyebrow">RECUERDOS SOBRE DOS RUEDAS</span>
+          <h2>NUESTRAS <span>AVENTURAS</span></h2>
+          <p>
+            Cada encuentro deja recuerdos que permanecen con nosotros
+            mucho después de apagar el motor.
+          </p>
         </div>
+
+        <div class="events-history-grid">
+
+          <article class="event-history-card">
+            <div class="event-history-image">
+              <img
+                src="evento3.jpg"
+                alt="Recuerdo de una rodada XTZ"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='XTZ.png'; this.classList.add('events-image-fallback');"
+              >
+              <span class="event-history-tag">RODADA</span>
+            </div>
+            <div class="event-history-content">
+              <span class="event-history-date">
+                <i class="fa-regular fa-calendar"></i>
+                Fecha por confirmar
+              </span>
+              <h3>Rodando en familia</h3>
+              <p>
+                Una experiencia más compartiendo carretera,
+                amistad y pasión por las motos.
+              </p>
+            </div>
+          </article>
+
+          <article class="event-history-card">
+            <div class="event-history-image">
+              <img
+                src="evento4.jpg"
+                alt="Encuentro de integrantes del club"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='XTZ.png'; this.classList.add('events-image-fallback');"
+              >
+              <span class="event-history-tag">ENCUENTRO</span>
+            </div>
+            <div class="event-history-content">
+              <span class="event-history-date">
+                <i class="fa-regular fa-calendar"></i>
+                Fecha por confirmar
+              </span>
+              <h3>Hermandad XTZ</h3>
+              <p>
+                Momentos que fortalecen nuestra unión y
+                nos recuerdan que somos una sola familia.
+              </p>
+            </div>
+          </article>
+
+          <article class="event-history-card">
+            <div class="event-history-image">
+              <img
+                src="evento5.jpg"
+                alt="Aventura motera del club"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='XTZ.png'; this.classList.add('events-image-fallback');"
+              >
+              <span class="event-history-tag">AVENTURA</span>
+            </div>
+            <div class="event-history-content">
+              <span class="event-history-date">
+                <i class="fa-regular fa-calendar"></i>
+                Fecha por confirmar
+              </span>
+              <h3>Una ruta para recordar</h3>
+              <p>
+                Nuevos caminos, grandes compañeros y recuerdos
+                que hacen parte de nuestra historia.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="events-history-note">
+          Las fechas, nombres y fotografías de esta sección son espacios
+          de ejemplo. Actualízalos con los eventos reales del club.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================
+         GALERÍA
+    ====================================== -->
+    <section class="events-gallery-section events-container">
+      <div class="events-section-heading">
+        <span class="events-eyebrow">IMÁGENES QUE CUENTAN HISTORIAS</span>
+        <h2>GALERÍA <span>XTZ</span></h2>
+        <p>
+          Revive la emoción de nuestras rodadas y los momentos
+          que compartimos en el camino.
+        </p>
+      </div>
+
+      <div class="events-gallery-grid">
+        <figure class="events-gallery-item">
+          <img
+            src="evento1.jpg"
+            alt="Fotografía de la familia XTZ"
+            loading="lazy"
+            onerror="this.onerror=null; this.src='XTZ.png'; this.classList.add('events-image-fallback');"
+          >
+          <figcaption>Pasión por las dos ruedas</figcaption>
+        </figure>
+
+        <figure class="events-gallery-item">
+          <img
+            src="evento2.jpg"
+            alt="Motocicletas en una rodada"
+            loading="lazy"
+            onerror="this.onerror=null; this.src='XTZ.png'; this.classList.add('events-image-fallback');"
+          >
+          <figcaption>Rodamos como familia</figcaption>
+        </figure>
+
+        <figure class="events-gallery-item">
+          <img
+            src="evento3.jpg"
+            alt="Aventura del club"
+            loading="lazy"
+            onerror="this.onerror=null; this.src='XTZ.png'; this.classList.add('events-image-fallback');"
+          >
+          <figcaption>Nuevos destinos</figcaption>
+        </figure>
+
+        <figure class="events-gallery-item">
+          <img
+            src="evento4.jpg"
+            alt="Integrantes del club compartiendo"
+            loading="lazy"
+            onerror="this.onerror=null; this.src='XTZ.png'; this.classList.add('events-image-fallback');"
+          >
+          <figcaption>Amistad y hermandad</figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- =====================================
+         INVITACIÓN FINAL
+    ====================================== -->
+    <section class="events-join-section">
+      <div class="events-join-overlay"></div>
+
+      <div class="events-join-content">
+        <span class="events-eyebrow">TU PRÓXIMA AVENTURA COMIENZA AQUÍ</span>
+
+        <h2>¿LISTO PARA <span>RODAR CON NOSOTROS?</span></h2>
+
+        <p>
+          Si compartes nuestra pasión por las motos, hay un lugar
+          para ti en esta gran familia. Conoce el club y acompáñanos
+          en nuestras próximas aventuras.
+        </p>
+
+        <div class="events-hero-buttons">
+          <a href="contacto.html" class="events-btn events-btn-primary">
+            <i class="fa-solid fa-envelope"></i>
+            Contáctanos
+          </a>
+
+          <a href="miembros.html" class="events-btn events-btn-outline">
+            <i class="fa-solid fa-users"></i>
+            Conoce la familia XTZ
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =====================================
+       PIE DE PÁGINA
+  ====================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-column footer-about">
+        <a href="index.html" class="footer-brand">
+          <img src="XTZ.png" alt="Logo CLUB XTZ CÚCUTA">
+        </a>
+
+        <h3>CLUB XTZ CÚCUTA</h3>
+
+        <p>
+          Más que un club, somos una familia unida por la pasión
+          por las motos, la carretera y la hermandad.
+        </p>
+
+        <p class="footer-motto">
+          XTZ DE CORAZÓN
+          <i class="fa-solid fa-heart"></i>
+        </p>
+      </div>
+
+      <div class="footer-column footer-links">
+        <h3>ENLACES RÁPIDOS</h3>
+
+        <a href="index.html">Inicio</a>
+        <a href="clubxtz.html">Club XTZ</a>
+        <a href="miembros.html">Familia XTZ</a>
+        <a href="eventos.html" aria-current="page">Rodadas y eventos</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>CONTÁCTANOS</h3>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          Cúcuta, Norte de Santander, Colombia
+        </p>
+
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          Teléfono: por confirmar
+        </p>
+
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          Correo: por confirmar
+        </p>
+
+        <h4>SÍGUENOS</h4>
+
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
 
     </div>
-</section>
 
-    <section class="eventos">
-    <div class="grid">
-
-        <!-- EVENTO -->
-        <div class="card">
-            <h3>Rodada a Durania</h3>
-            <p><strong>Fecha:</strong> 10 Mayo 2026</p>
-            <p><strong>Punto de salida:</strong> Cúcuta</p>
-            <p><strong>Distancia:</strong> 47 km</p>
-
-            <!-- MAPA -->
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7907.411375416649!2d-72.66136880868896!3d7.714695050975799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e66345984788277%3A0x90d7d616cfa3b3e8!2sDurania%2C%20Duran%C3%ADa%2C%20Norte%20de%20Santander%2C%20Colombia!5e0!3m2!1ses!2sus!4v1776958918866!5m2!1ses!2sus">
-            </iframe>
-        </div>
-
-        <!-- EVENTO -->
-        <div class="card">
-            <h3>Ruta a bogota</h3>
-            <p><strong>Fecha:</strong> 25 Mayo 2026</p>
-            <p><strong>Punto de salida:</strong> Cúcuta</p>
-            <p><strong>Distancia:</strong> 568 km</p>
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.39472442554!2d-74.27261998928225!3d4.648620633734253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2sBogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1776958786891!5m2!1ses!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-
+    <div class="footer-bottom">
+      <p>
+        &copy; 2026 CLUB XTZ CÚCUTA.
+        Todos los derechos reservados.
+      </p>
+      <p>HECHOS PARA RODAR. UNIDOS POR LA HERMANDAD.</p>
     </div>
-</section>
+  </footer>
 
-<div class="social-bar">
 
-    <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+  <!-- =====================================
+       JAVASCRIPT
+  ====================================== -->
+  <script>
+    /* MENÚ MÓVIL */
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
 
-</div>
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener("click", function () {
+        const abierto = mainNav.classList.toggle("nav-open");
 
-    
-<footer>
-    <p>© 2026 CLUB XTZ CÚCUTA</p>
-</footer>
-<script>
-const fechaEvento = new Date("April 26, 2026 08:00:00").getTime();
+        menuToggle.setAttribute("aria-expanded", String(abierto));
+        menuToggle.setAttribute(
+          "aria-label",
+          abierto ? "Cerrar menú" : "Abrir menú"
+        );
 
-const contador = setInterval(() => {
+        menuToggle.innerHTML = abierto
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-bars"></i>';
+      });
 
-    const ahora = new Date().getTime();
-    const diferencia = fechaEvento - ahora;
-
-    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
-    const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
-    const segundos = Math.floor((diferencia / 1000) % 60);
-
-    document.getElementById("dias").innerText = dias;
-    document.getElementById("horas").innerText = horas;
-    document.getElementById("minutos").innerText = minutos;
-    document.getElementById("segundos").innerText = segundos;
-
-    if (diferencia < 0) {
-        clearInterval(contador);
-        document.querySelector(".contador").innerHTML = "<h2>🔥 CAMPEÓN REVELADO 🔥</h2>";
+      mainNav.querySelectorAll("a").forEach(function (enlace) {
+        enlace.addEventListener("click", function () {
+          mainNav.classList.remove("nav-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Abrir menú");
+          menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        });
+      });
     }
 
-}, 1000);
-</script>
+    /*
+      CONFIGURACIÓN DE LA PRÓXIMA RODADA
+
+      Cuando confirmen la rodada, cambia los valores de abajo.
+      La fecha debe escribirse como: AAAA-MM-DDTHH:MM:SS
+      Ejemplo de formato: 2026-12-20T07:00:00
+    */
+    const proximaRodada = {
+      nombre: "Próxima rodada XTZ",
+      descripcion: "Muy pronto compartiremos todos los detalles de nuestra próxima aventura.",
+      fecha: "",
+      destino: "Por confirmar",
+      hora: "Por confirmar"
+    };
+
+    const eventName = document.getElementById("nextEventName");
+    const eventDescription = document.getElementById("nextEventDescription");
+    const eventDate = document.getElementById("nextEventDate");
+    const eventDestination = document.getElementById("nextEventDestination");
+    const eventTime = document.getElementById("nextEventTime");
+    const countdown = document.getElementById("eventCountdown");
+    const countdownNote = document.getElementById("countdownNote");
+
+    if (eventName) eventName.textContent = proximaRodada.nombre;
+    if (eventDescription) eventDescription.textContent = proximaRodada.descripcion;
+    if (eventDestination) eventDestination.textContent = proximaRodada.destino;
+    if (eventTime) eventTime.textContent = proximaRodada.hora;
+
+    let countdownInterval = null;
+
+    function detenerContador() {
+      if (countdownInterval !== null) {
+        clearInterval(countdownInterval);
+        countdownInterval = null;
+      }
+    }
+
+    function mostrarContadorVacio(mensaje) {
+      countdown.innerHTML = `
+        <div class="countdown-unavailable">${mensaje}</div>
+      `;
+    }
+
+    function actualizarContador() {
+      if (!proximaRodada.fecha) {
+        mostrarContadorVacio("FECHA POR CONFIRMAR");
+        countdownNote.textContent =
+          "Publicaremos el día y la hora cuando sean confirmados oficialmente.";
+        detenerContador();
+        return;
+      }
+
+      const fechaObjetivo = new Date(proximaRodada.fecha).getTime();
+
+      if (Number.isNaN(fechaObjetivo)) {
+        mostrarContadorVacio("FECHA POR CONFIRMAR");
+        countdownNote.textContent =
+          "Revisa el formato de fecha de la próxima rodada.";
+        detenerContador();
+        return;
+      }
+
+      if (eventDate) {
+        const fechaLegible = new Date(proximaRodada.fecha);
+        eventDate.textContent = fechaLegible.toLocaleDateString("es-CO", {
+          day: "2-digit",
+          month: "long",
+          year: "numeric"
+        });
+      }
+
+      const diferencia = fechaObjetivo - Date.now();
+
+      if (diferencia <= 0) {
+        mostrarContadorVacio("¡ES HORA DE RODAR!");
+        countdownNote.textContent =
+          "La fecha programada ha llegado. Consulta los canales oficiales del club.";
+        detenerContador();
+        return;
+      }
+
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor(
+        (diferencia / (1000 * 60 * 60)) % 24
+      );
+      const minutos = Math.floor(
+        (diferencia / (1000 * 60)) % 60
+      );
+      const segundos = Math.floor(
+        (diferencia / 1000) % 60
+      );
+
+      countdown.innerHTML = `
+        <div class="countdown-unit">
+          <strong>${dias}</strong>
+          <span>DÍAS</span>
+        </div>
+        <div class="countdown-unit">
+          <strong>${String(horas).padStart(2, "0")}</strong>
+          <span>HORAS</span>
+        </div>
+        <div class="countdown-unit">
+          <strong>${String(minutos).padStart(2, "0")}</strong>
+          <span>MINUTOS</span>
+        </div>
+        <div class="countdown-unit">
+          <strong>${String(segundos).padStart(2, "0")}</strong>
+          <span>SEGUNDOS</span>
+        </div>
+      `;
+
+      countdownNote.textContent = "Cuenta regresiva para nuestra próxima aventura.";
+    }
+
+    actualizarContador();
+
+    if (proximaRodada.fecha) {
+      countdownInterval = setInterval(actualizarContador, 1000);
+    }
+  </script>
+
 </body>
 </html>
