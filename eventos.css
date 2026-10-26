@@ -965,3 +965,299 @@
     transform: none;
   }
 }
+
+/* HISTORIAL DE AVENTURAS */
+
+.events-history-section {
+  padding: 65px 6%;
+  background: #f5f5f5;
+}
+
+.events-section-heading {
+  max-width: 780px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.events-section-heading h2 {
+  margin: 10px 0;
+  color: #111;
+  font-family: var(--font-title, "Barlow Condensed", sans-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-transform: uppercase;
+}
+
+.events-section-heading p {
+  color: #555;
+  line-height: 1.7;
+}
+
+.events-eyebrow {
+  color: #d4002a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.adventure-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1100px;
+  margin: 0 auto 38px;
+}
+
+.adventure-summary-card {
+  padding: 25px 15px;
+  text-align: center;
+  background: #111;
+  color: #fff;
+  border-bottom: 4px solid #d4002a;
+  border-radius: 8px;
+}
+
+.adventure-summary-card i {
+  display: block;
+  margin-bottom: 10px;
+  color: #ed153b;
+  font-size: 1.5rem;
+}
+
+.adventure-summary-card span {
+  display: block;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+}
+
+.adventure-summary-card p {
+  margin: 7px 0 0;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.adventure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.adventure-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.adventure-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  background: #111;
+  color: #fff;
+}
+
+.adventure-date,
+.adventure-tag {
+  font-size: 0.8rem;
+}
+
+.adventure-tag {
+  color: #ff4966;
+  font-weight: 800;
+}
+
+.adventure-card-content {
+  padding: 22px;
+}
+
+.adventure-card-content h3 {
+  margin: 0 0 10px;
+  color: #151515;
+  font-family: var(--font-title, "Barlow Condensed", sans-serif);
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+.adventure-destination {
+  color: #c9002b;
+  font-weight: 700;
+}
+
+.adventure-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 22px 0;
+  padding: 16px 8px;
+  background: #f5f5f5;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.adventure-stats div {
+  min-width: 0;
+}
+
+.adventure-stats strong,
+.adventure-stats span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.adventure-stats strong {
+  color: #111;
+  font-size: 0.95rem;
+}
+
+.adventure-stats span {
+  margin-top: 5px;
+  color: #666;
+  font-size: 0.75rem;
+}
+
+.adventure-description {
+  color: #444;
+  line-height: 1.7;
+}
+
+.adventure-highlights {
+  margin: 22px 0;
+}
+
+.adventure-highlights h4,
+.adventure-map-section h4 {
+  color: #171717;
+  font-size: 1rem;
+}
+
+.adventure-highlights h4 i,
+.adventure-map-section h4 i {
+  color: #d4002a;
+}
+
+.adventure-highlights ul {
+  padding-left: 22px;
+  color: #444;
+  line-height: 1.8;
+}
+
+.adventure-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.adventure-photo-grid img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 5px;
+  background: #eee;
+}
+
+.adventure-map-section {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.adventure-map-section iframe {
+  display: block;
+  width: 100%;
+  height: 280px;
+  border: 0;
+  border-radius: 7px;
+  background: #eee;
+}
+
+.adventure-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: #c9002b;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.adventure-map-link:hover {
+  background: #990020;
+}
+
+.adventure-map-placeholder {
+  padding: 30px 15px;
+  text-align: center;
+  background: #f3f3f3;
+  border: 1px dashed #bbb;
+  border-radius: 7px;
+  color: #555;
+}
+
+.adventure-map-placeholder i {
+  color: #c9002b;
+  font-size: 2rem;
+}
+
+.adventure-empty {
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 35px 20px;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.adventure-empty[hidden] {
+  display: none !important;
+}
+
+.adventure-empty > i {
+  color: #c9002b;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 800px) {
+  .adventure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .events-history-section {
+    padding: 45px 5%;
+  }
+}
+
+@media (max-width: 520px) {
+  .adventure-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .adventure-card-content {
+    padding: 16px;
+  }
+
+  .adventure-stats {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .adventure-photo-grid img {
+    height: 85px;
+  }
+
+  .adventure-map-section iframe {
+    height: 240px;
+  }
+}
