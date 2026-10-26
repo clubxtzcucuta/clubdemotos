@@ -1,86 +1,583 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Club | CLUB XTZ CÚCUTA</title>
-    <link rel="stylesheet" href="club.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Favicon -->
-    <link rel="icon" href="XTZ.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>El Club | CLUB XTZ Cúcuta</title>
+  <meta
+    name="description"
+    content="Conoce la historia, los valores y la pasión motera de CLUB XTZ Cúcuta. Somos una familia unida por las motos, las rodadas y la amistad."
+  >
+
+  <link rel="icon" href="images/XTZ.png" type="image/png">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Iconos -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- CSS global y CSS exclusivo de esta página -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="clubxtz.css">
 </head>
+
 <body>
 
-<header>
-    <div class="logo-header">
-        <img src="XTZ.png" alt="Logo">
-        <h1>CLUB XTZ CÚCUTA</h1>
-    </div>
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
 
-    <nav>
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
         <a href="index.html">Inicio</a>
-        <a href="elclub.html">El Club</a>
+        <a href="clubxtz.html" class="active" aria-current="page">El club</a>
         <a href="miembros.html">Miembros</a>
-        <a href="eventos.html">Eventos</a>
-        <a href="Conctato.html">Contacto</a>
-    </nav>
-</header>
+        <a href="eventos.html">Rodadas y eventos</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
 
-<section class="club-hero">
-    <h1>NUESTRA HERMANDAD</h1>
-    <p>Más que motos, somos una familia sobre ruedas.</p>
-</section>
+      <a class="brand" href="index.html" aria-label="CLUB XTZ Cúcuta, inicio">
+        <img src="images/XTZ.png" alt="Logo CLUB XTZ Cúcuta">
+        <span>
+          <strong>CLUB XTZ</strong>
+          <small>CÚCUTA · COLOMBIA</small>
+        </span>
+      </a>
 
-<section class="club-info">
-    <div class="text">
-        <h2>¿Quiénes somos?</h2>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-controls="mainNav"
+        aria-expanded="false"
+      >
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO DEL CLUB ================= -->
+    <section class="club-hero">
+      <div class="club-hero-shade"></div>
+
+      <div class="container club-hero-content">
+        <span class="club-eyebrow">
+          <i class="fas fa-motorcycle" aria-hidden="true"></i>
+          Una pasión que nos une
+        </span>
+
+        <h1>
+          MÁS QUE UN CLUB,
+          <span>UNA FAMILIA.</span>
+        </h1>
+
         <p>
-            CLUB XTZ CÚCUTA es una comunidad de moteros apasionados por la aventura,
-            la carretera y el respeto entre pilotos. Nuestro objetivo es crecer como
-            club en la ciudad de Cúcuta y representar el verdadero espíritu biker.
+          Somos CLUB XTZ CÚCUTA. Nos une la pasión por las motos,
+          la carretera, la amistad y las experiencias que vivimos
+          kilómetro a kilómetro.
         </p>
 
-        <h2>Misión</h2>
+        <div class="club-hero-actions">
+          <a href="#nuestra-historia" class="btn btn-red">
+            Conoce nuestra historia
+            <i class="fas fa-arrow-down" aria-hidden="true"></i>
+          </a>
+
+          <a href="contacto.html" class="btn btn-outline club-hero-outline">
+            Únete a la familia
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="club-hero-bottom">
+        <div class="container">
+          <span>RESPETO</span>
+          <i class="fas fa-circle" aria-hidden="true"></i>
+          <span>HERMANDAD</span>
+          <i class="fas fa-circle" aria-hidden="true"></i>
+          <span>PASIÓN MOTERA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTRODUCCIÓN ================= -->
+    <section class="club-intro club-section" id="nuestra-historia">
+      <div class="container club-intro-grid">
+
+        <div class="club-intro-image">
+          <img
+            src="images/rodada1.jpg"
+            alt="Motocicletas y miembros de CLUB XTZ Cúcuta durante una rodada"
+            loading="lazy"
+          >
+
+          <div class="club-image-label">
+            <i class="fas fa-road" aria-hidden="true"></i>
+            <span>Un mismo camino</span>
+          </div>
+        </div>
+
+        <div class="club-intro-content">
+          <span class="club-eyebrow">Quiénes somos</span>
+
+          <h2>
+            EL ESPÍRITU
+            <span>XTZ</span>
+          </h2>
+
+          <p>
+            CLUB XTZ CÚCUTA es un espacio para personas que comparten
+            el gusto por las motocicletas, las rodadas y la libertad
+            que se siente al recorrer nuevos caminos.
+          </p>
+
+          <p>
+            Creemos que pertenecer a un club significa mucho más que
+            compartir una moto. Significa construir amistades,
+            acompañarnos en la carretera, disfrutar nuevas experiencias
+            y representar nuestros valores en cada recorrido.
+          </p>
+
+          <p>
+            Cada rodada es una oportunidad para fortalecer nuestros
+            lazos, conocer lugares y seguir escribiendo nuestra historia
+            como familia motera.
+          </p>
+
+          <a href="miembros.html" class="btn btn-black">
+            Conoce a nuestros miembros
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= FRASE DESTACADA ================= -->
+    <section class="club-quote">
+      <div class="container club-quote-inner">
+        <i class="fas fa-quote-left" aria-hidden="true"></i>
+
+        <blockquote>
+          Si llegaste hasta aquí, no es casualidad.
+          Bienvenido a esta gran familia motera.
+        </blockquote>
+
+        <p>XTZ DE CORAZÓN <span>❤️</span></p>
+      </div>
+    </section>
+
+    <!-- ================= MISIÓN Y VISIÓN ================= -->
+    <section class="club-purpose club-section">
+      <div class="container">
+
+        <div class="club-section-heading">
+          <span class="club-eyebrow">Nuestra esencia</span>
+          <h2>LO QUE NOS <span>MUEVE</span></h2>
+          <p>
+            Compartimos una pasión y construimos una comunidad
+            basada en el respeto, la unión y la responsabilidad.
+          </p>
+        </div>
+
+        <div class="club-purpose-grid">
+
+          <article class="club-purpose-card">
+            <div class="club-purpose-icon">
+              <i class="fas fa-flag-checkered" aria-hidden="true"></i>
+            </div>
+
+            <span class="club-card-number">01</span>
+
+            <h3>NUESTRA MISIÓN</h3>
+
+            <p>
+              Fomentar la unión entre los amantes de las motocicletas
+              mediante rodadas, encuentros y actividades que promuevan
+              la amistad, el compañerismo, el respeto y la conducción
+              responsable.
+            </p>
+          </article>
+
+          <article class="club-purpose-card club-purpose-featured">
+            <div class="club-purpose-icon">
+              <i class="fas fa-mountain-sun" aria-hidden="true"></i>
+            </div>
+
+            <span class="club-card-number">02</span>
+
+            <h3>NUESTRA VISIÓN</h3>
+
+            <p>
+              Fortalecer una comunidad motera reconocida por su
+              hermandad, organización y compromiso, creando experiencias
+              memorables dentro y fuera de la carretera.
+            </p>
+          </article>
+
+          <article class="club-purpose-card">
+            <div class="club-purpose-icon">
+              <i class="fas fa-handshake" aria-hidden="true"></i>
+            </div>
+
+            <span class="club-card-number">03</span>
+
+            <h3>NUESTRO COMPROMISO</h3>
+
+            <p>
+              Representar al club con orgullo, respetar a cada integrante,
+              cuidar de nuestros compañeros en cada rodada y promover
+              siempre una cultura de seguridad vial.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VALORES ================= -->
+    <section class="club-values club-section">
+      <div class="container">
+
+        <div class="club-section-heading">
+          <span class="club-eyebrow">Lo que nos identifica</span>
+          <h2>NUESTROS <span>VALORES</span></h2>
+          <p>
+            La identidad del club se construye con nuestras acciones,
+            dentro y fuera de la carretera.
+          </p>
+        </div>
+
+        <div class="club-values-grid">
+
+          <article class="club-value">
+            <div class="club-value-icon">
+              <i class="fas fa-people-group" aria-hidden="true"></i>
+            </div>
+            <h3>Hermandad</h3>
+            <p>Somos compañeros de ruta y una familia que se apoya.</p>
+          </article>
+
+          <article class="club-value">
+            <div class="club-value-icon">
+              <i class="fas fa-shield-heart" aria-hidden="true"></i>
+            </div>
+            <h3>Respeto</h3>
+            <p>Valoramos a cada integrante y respetamos a los demás conductores.</p>
+          </article>
+
+          <article class="club-value">
+            <div class="club-value-icon">
+              <i class="fas fa-helmet-safety" aria-hidden="true"></i>
+            </div>
+            <h3>Responsabilidad</h3>
+            <p>La seguridad y el cuidado de nuestros compañeros son prioridad.</p>
+          </article>
+
+          <article class="club-value">
+            <div class="club-value-icon">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+            </div>
+            <h3>Pasión</h3>
+            <p>Disfrutamos cada kilómetro y compartimos el amor por las motos.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NUESTRA PASIÓN ================= -->
+    <section class="club-experience club-section">
+      <div class="container club-experience-grid">
+
+        <div class="club-experience-content">
+          <span class="club-eyebrow">Vivimos la carretera</span>
+
+          <h2>
+            CADA RODADA
+            <span>CUENTA UNA HISTORIA.</span>
+          </h2>
+
+          <p>
+            No se trata solamente del destino. Se trata de los amigos
+            que nos acompañan, las rutas que descubrimos, las historias
+            que compartimos y los recuerdos que llevamos con nosotros.
+          </p>
+
+          <p>
+            En CLUB XTZ CÚCUTA buscamos que cada encuentro sea una
+            oportunidad para compartir, aprender y fortalecer
+            nuestra familia motera.
+          </p>
+
+          <div class="club-experience-points">
+            <div>
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              Rodadas y recorridos en grupo
+            </div>
+
+            <div>
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              Encuentros y actividades del club
+            </div>
+
+            <div>
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              Amistad, respeto y compañerismo
+            </div>
+          </div>
+
+          <a href="eventos.html" class="btn btn-red">
+            Explorar rodadas y eventos
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="club-experience-gallery">
+          <figure class="club-gallery-main">
+            <img
+              src="images/rodada2.jpg"
+              alt="Experiencia motera durante una rodada del club"
+              loading="lazy"
+            >
+            <figcaption>La pasión nos une</figcaption>
+          </figure>
+
+          <figure class="club-gallery-secondary">
+            <img
+              src="images/rodada3.jpg"
+              alt="Motocicletas de la comunidad XTZ"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= IDENTIDAD DEL CLUB ================= -->
+    <section class="club-identity">
+      <div class="container club-identity-inner">
+
+        <img
+          src="images/XTZ.png"
+          alt="Emblema de CLUB XTZ Cúcuta"
+          loading="lazy"
+        >
+
+        <div class="club-identity-content">
+          <span class="club-eyebrow">Nuestra identidad</span>
+
+          <h2>ORGULLOSOS DE SER <span>XTZ</span></h2>
+
+          <p>
+            Cada integrante aporta algo especial a esta familia.
+            Nos identificamos con la unión, la pasión por las motos
+            y el orgullo de compartir el camino bajo un mismo nombre.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= DIRECTIVA ================= -->
+    <section class="club-leadership club-section">
+      <div class="container">
+
+        <div class="club-section-heading">
+          <span class="club-eyebrow">Las personas detrás del club</span>
+          <h2>QUIÉNES NOS <span>REPRESENTAN</span></h2>
+          <p>
+            Conoce al equipo que contribuye a la organización
+            y el crecimiento de nuestra comunidad.
+          </p>
+        </div>
+
+        <div class="club-leadership-panel">
+          <div class="club-leadership-icon">
+            <i class="fas fa-users-gear" aria-hidden="true"></i>
+          </div>
+
+          <div>
+            <h3>Una familia, un mismo propósito</h3>
+            <p>
+              La organización del club se construye con el compromiso
+              de sus integrantes, la colaboración y el deseo de
+              seguir creciendo juntos.
+            </p>
+          </div>
+
+          <a href="index.html#directiva" class="btn btn-black">
+            Conocer la directiva
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= INVITACIÓN FINAL ================= -->
+    <section class="club-join">
+      <div class="club-join-overlay"></div>
+
+      <div class="container club-join-content">
+        <span class="club-eyebrow">Tu próxima historia comienza aquí</span>
+
+        <h2>
+          ¿LISTO PARA
+          <span>RODAR CON NOSOTROS?</span>
+        </h2>
+
         <p>
-            Unir a los amantes de las motos bajo valores de respeto, compromiso y
-            hermandad, creando experiencias únicas en cada rodada.
+          Si compartes nuestra pasión por las motos, el respeto
+          y la hermandad, queremos conocerte.
         </p>
 
-        <h2>Visión</h2>
-        <p>
-            Ser uno de los clubes más reconocidos en Colombia, destacando por nuestra
-            organización, presencia y pasión en cada evento.
-        </p>
+        <div class="club-join-actions">
+          <a href="contacto.html" class="btn btn-red">
+            Ponte en contacto
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+
+          <a href="eventos.html" class="btn btn-outline club-hero-outline">
+            Ver próximos eventos
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <img
+            src="images/XTZ.png"
+            alt="Logo CLUB XTZ Cúcuta"
+            class="footer-logo"
+          >
+
+          <h3>CLUB XTZ <span>CÚCUTA</span></h3>
+
+          <p>
+            Más que un club, una familia. Unidos por la pasión
+            por las motos, la carretera y la amistad.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Enlaces rápidos</h4>
+          <a href="index.html">Inicio</a>
+          <a href="clubxtz.html" aria-current="page">El club</a>
+          <a href="miembros.html">Miembros</a>
+          <a href="eventos.html">Rodadas y eventos</a>
+          <a href="tienda.html">Tienda</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contacto</h4>
+
+          <p>
+            <i class="fas fa-location-dot" aria-hidden="true"></i>
+            Cúcuta, Colombia
+          </p>
+
+          <p>
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            +57 XXX XXX XXXX
+          </p>
+
+          <p class="footer-social-title">Síguenos en redes</p>
+
+          <div class="social-links">
+            <a href="https://www.instagram.com/" aria-label="Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/" aria-label="TikTok">
+              <i class="fab fa-tiktok" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://www.youtube.com/" aria-label="YouTube">
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <div class="image">
-        <img src="XTZ.png" alt="Club XTZ">
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 <strong>CLUB XTZ CÚCUTA</strong>. Todos los derechos reservados.</p>
+        <p>Hecho con pasión motera ❤️</p>
+      </div>
     </div>
-</section>
+  </footer>
 
-<section class="valores">
-    <h2>NUESTROS VALORES</h2>
+  <!-- ================= MENÚ MÓVIL ================= -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
 
-    <div class="cards">
-        <div class="card">Respeto</div>
-        <div class="card">Hermandad</div>
-        <div class="card">Lealtad</div>
-        <div class="card">Pasión</div>
-    </div>
-</section>
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = mainNav.classList.toggle("nav-open");
 
-<div class="social-bar">
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen ? "Cerrar menú" : "Abrir menú"
+        );
 
-    <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        const icon = menuToggle.querySelector("i");
 
-</div>
-    
-<footer>
-    <p>© 2026 CLUB XTZ CÚCUTA</p>
-</footer>
+        if (icon) {
+          icon.classList.toggle("fa-bars", !isOpen);
+          icon.classList.toggle("fa-xmark", isOpen);
+        }
+      });
+
+      mainNav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mainNav.classList.remove("nav-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Abrir menú");
+
+          const icon = menuToggle.querySelector("i");
+
+          if (icon) {
+            icon.classList.add("fa-bars");
+            icon.classList.remove("fa-xmark");
+          }
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>
