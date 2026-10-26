@@ -466,7 +466,7 @@
          INFORMACIÓN DE LOS 30 MIEMBROS
       ===================================== */
       const miembrosData = [
-        { nombre: "Edinson Avendaño", sangre: "O+", profesion: "Empleado", ingreso: "25/08/2020" },
+        { nombre: "Edinson Avendaño", moto: "XTZ 150 - AVENTIIR", sangre: "O+", profesion: "Empleado", ingreso: "25/08/2020" },
         { nombre: "Miembro 02", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
         { nombre: "Miembro 03", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
         { nombre: "Miembro 04", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
@@ -539,7 +539,9 @@
                   loading="lazy"
                   onerror="this.onerror=null; this.src='images/XTZ.png'; this.classList.add('member-fallback-logo');"
                 >
-                <span class="member-profile-number">XTZ ${numero}</span>
+                <span class="member-profile-number">
+  ${miembro.moto || "Moto por confirmar"}
+</span>
               </div>
 
               <div class="member-profile-content">
