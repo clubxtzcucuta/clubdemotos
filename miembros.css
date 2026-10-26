@@ -1130,3 +1130,127 @@
   overflow-wrap: anywhere;
   text-transform: uppercase;
 }
+
+/* =====================================
+   ACOMPAÑANTES DE LOS PILOTOS
+===================================== */
+
+.companions-section {
+  padding-top: 70px;
+  padding-bottom: 80px;
+  background: #f7f7f7;
+}
+
+.companions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 35px;
+}
+
+.companion-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.companion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.companion-photo {
+  height: 245px;
+  overflow: hidden;
+  background: #ededed;
+  border-bottom: 4px solid #c8102e;
+}
+
+.companion-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.35s ease;
+}
+
+.companion-card:hover .companion-photo img {
+  transform: scale(1.04);
+}
+
+.companion-photo img.companion-fallback-logo {
+  box-sizing: border-box;
+  padding: 35px;
+  object-fit: contain;
+  background: #f1f1f1;
+}
+
+.companion-info {
+  padding: 20px 18px 23px;
+  text-align: center;
+}
+
+.companion-role {
+  display: block;
+  margin-bottom: 10px;
+  color: #c8102e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
+.companion-info h3 {
+  margin: 0;
+  color: #171717;
+  font-family: var(--font-title);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1000px) {
+  .companions-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .companions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .companion-photo {
+    height: 220px;
+  }
+
+  .companion-info {
+    padding: 17px 12px 20px;
+  }
+
+  .companion-info h3 {
+    font-size: 18px;
+  }
+
+  .companion-role {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .companions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .companion-photo {
+    height: 300px;
+  }
+}
