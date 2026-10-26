@@ -1,0 +1,932 @@
+/* =========================================================
+   CLUB XTZ CÚCUTA
+   index.css — Estilos exclusivos de la página de inicio
+   ========================================================= */
+
+/* ---------- PORTADA / HERO ---------- */
+
+.hero {
+  position: relative;
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.42)),
+    url("images/rodada1.jpg") center 45% / cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201, 0, 36, 0.24), transparent 60%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 850px;
+  padding: 90px 0 115px;
+}
+
+.hero h1 {
+  margin: 12px 0 20px;
+  font-family: var(--font-title);
+  font-size: clamp(3.2rem, 7vw, 6.3rem);
+  line-height: 0.98;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--red);
+}
+
+.hero p {
+  max-width: 700px;
+  margin-bottom: 28px;
+  color: #f3f3f3;
+  font-size: clamp(0.95rem, 2vw, 1.12rem);
+  line-height: 1.9;
+}
+
+.hero .eyebrow {
+  color: #ff526d;
+}
+
+.hero-bottom {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 17px 20px;
+  background: rgba(201, 0, 36, 0.94);
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ---------- CARRUSEL DE FOTOGRAFÍAS ---------- */
+
+.photo-section {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--black);
+  box-shadow: var(--shadow);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.65s ease-in-out;
+  will-change: transform;
+}
+
+.carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 100%;
+  height: 420px;
+  overflow: hidden;
+  background: #222;
+}
+
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: opacity 0.4s ease, transform 0.7s ease;
+}
+
+.carousel-slide:hover img {
+  opacity: 0.68;
+  transform: scale(1.025);
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  color: var(--white);
+  font-size: 1.15rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 0.25s ease;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: var(--red);
+}
+
+.carousel-prev {
+  left: 18px;
+}
+
+.carousel-next {
+  right: 18px;
+}
+
+.carousel-dots {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 18px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+}
+
+.carousel-dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.carousel-dots button.active {
+  background: var(--red);
+  transform: scale(1.3);
+}
+
+/* ---------- CUENTA REGRESIVA DE LA PRÓXIMA RODADA ---------- */
+
+.ride-section {
+  padding: 80px 0;
+  background: #111;
+  color: var(--white);
+}
+
+.ride-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.ride-copy h2 {
+  margin: 10px 0 18px;
+  font-family: var(--font-title);
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.ride-copy h2 span {
+  color: var(--red);
+}
+
+.ride-copy > p {
+  margin-bottom: 25px;
+  color: #d2d2d2;
+}
+
+.ride-details {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.ride-details p {
+  margin: 0;
+  padding: 12px 15px;
+  border-left: 3px solid var(--red);
+  background: rgba(255, 255, 255, 0.055);
+  color: #eee;
+}
+
+.ride-details strong {
+  color: var(--white);
+}
+
+.countdown-card {
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 4px solid var(--red);
+  border-radius: var(--radius);
+  background: #1b1b1b;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
+.countdown-card h3 {
+  margin-bottom: 22px;
+  font-family: var(--font-title);
+  font-size: 1.65rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.countdown-item {
+  padding: 17px 5px;
+  border-radius: 8px;
+  background: #292929;
+  text-align: center;
+}
+
+.countdown-item strong {
+  display: block;
+  color: var(--red);
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.1;
+}
+
+.countdown-item span {
+  display: block;
+  margin-top: 8px;
+  color: #d4d4d4;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#countdownMessage {
+  margin: 20px 0 0;
+  color: #ccc;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+/* ---------- ESTADÍSTICAS ---------- */
+
+.stats-section {
+  position: relative;
+  z-index: 1;
+  padding: 55px 0;
+  background: var(--red);
+  color: var(--white);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.stat-card {
+  display: block;
+  padding: 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+.stat-card:last-child {
+  border-right: 0;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card strong {
+  display: block;
+  font-family: var(--font-title);
+  font-size: clamp(2.6rem, 5vw, 4.1rem);
+  line-height: 1;
+}
+
+.stat-card span {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ---------- CONOCE AL CLUB ---------- */
+
+.about-section {
+  padding: 90px 0;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-image {
+  position: relative;
+  min-height: 430px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #222;
+  box-shadow: var(--shadow);
+}
+
+.about-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.04);
+}
+
+.image-stamp {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  padding: 13px 18px;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.about-copy h2 {
+  margin: 10px 0 20px;
+  font-family: var(--font-title);
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.about-copy h2 span {
+  color: var(--red);
+}
+
+.about-copy p {
+  margin-bottom: 17px;
+  color: var(--gray);
+}
+
+/* ---------- CAMPEÓN ACTUAL ---------- */
+
+.champion-section {
+  padding: 80px 0;
+  background: #111;
+  color: var(--white);
+}
+
+.champion-section .section-heading {
+  color: var(--white);
+}
+
+.champion-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  max-width: 950px;
+  margin: 35px auto 0;
+  overflow: hidden;
+  border: 1px solid #333;
+  border-radius: var(--radius);
+  background: #1b1b1b;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.25);
+}
+
+.champion-photo {
+  position: relative;
+  min-height: 340px;
+  background: #292929;
+}
+
+.champion-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.champion-info {
+  align-self: center;
+  padding: 35px;
+}
+
+.champion-info h3 {
+  margin: 10px 0 16px;
+  font-family: var(--font-title);
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.champion-info p {
+  margin-bottom: 12px;
+  color: #d2d2d2;
+}
+
+.champion-info strong {
+  color: var(--white);
+}
+
+.champion-info .champion-title {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 4px;
+  background: var(--red);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ---------- FUNDADOR, DUEÑO Y DIRECTIVOS ---------- */
+
+.leadership-section {
+  padding: 90px 0;
+}
+
+.leadership-section .section-heading {
+  margin-bottom: 40px;
+}
+
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.leader-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 17px 38px rgba(0, 0, 0, 0.14);
+}
+
+.leader-photo {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background: #292929;
+}
+
+.leader-photo::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent 65%);
+  content: "";
+}
+
+.leader-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.leader-card:hover .leader-photo img {
+  transform: scale(1.05);
+}
+
+.leader-number {
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  left: 15px;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.leader-info {
+  padding: 22px;
+}
+
+.leader-role {
+  display: inline-block;
+  margin-bottom: 9px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: var(--red);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.leader-info h3 {
+  margin-bottom: 14px;
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.leader-info ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.leader-info li {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+  color: var(--gray);
+  font-size: 0.82rem;
+  overflow-wrap: anywhere;
+}
+
+.leader-info li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.leader-info li strong {
+  color: var(--black);
+}
+
+/* ---------- INVITACIÓN A LA TIENDA ---------- */
+
+.store-section {
+  padding: 20px 0 85px;
+}
+
+.store-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 45px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: linear-gradient(120deg, #151515, #303030);
+  color: var(--white);
+}
+
+.store-banner::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 6px;
+  background: var(--red);
+  content: "";
+}
+
+.store-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+}
+
+.store-copy h2 {
+  margin: 10px 0 15px;
+  font-family: var(--font-title);
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.store-copy h2 span {
+  color: #ff3656;
+}
+
+.store-copy p {
+  margin-bottom: 22px;
+  color: #ddd;
+}
+
+.store-icon {
+  flex-shrink: 0;
+  color: var(--red);
+  font-size: clamp(4rem, 8vw, 7rem);
+}
+
+/* ---------- CONTACTO ---------- */
+
+.contact-section {
+  padding: 75px 0 90px;
+  background: #f4f4f4;
+}
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 35px;
+  padding: 40px;
+  border: 1px solid #e4e4e4;
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.contact-panel h2 {
+  margin: 10px 0 15px;
+  font-family: var(--font-title);
+  font-size: clamp(2.5rem, 4vw, 3.7rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.contact-panel h2 span {
+  color: var(--red);
+}
+
+.contact-panel p {
+  color: var(--gray);
+}
+
+.contact-details {
+  display: grid;
+  gap: 15px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.contact-detail i {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 8px;
+  background: #fff0f2;
+  color: var(--red);
+  font-size: 1.2rem;
+}
+
+.contact-detail strong {
+  display: block;
+  color: var(--black);
+  font-size: 0.9rem;
+}
+
+.contact-detail span {
+  display: block;
+  color: var(--gray);
+  font-size: 0.82rem;
+  overflow-wrap: anywhere;
+}
+
+.contact-action {
+  margin-top: 20px;
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 520px;
+  }
+
+  .ride-layout,
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-image {
+    min-height: 360px;
+  }
+
+  .leaders-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .champion-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-panel {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .store-banner {
+    padding: 35px;
+  }
+}
+
+/* ---------- MÓVILES ---------- */
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 490px;
+    background-position: 58% center;
+  }
+
+  .hero-content {
+    padding: 75px 0 100px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 13vw, 4rem);
+  }
+
+  .hero p {
+    font-size: 0.92rem;
+  }
+
+  .hero-bottom {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  .photo-section,
+  .about-section,
+  .leadership-section {
+    padding: 60px 0;
+  }
+
+  .carousel-slide {
+    height: 260px;
+  }
+
+  .carousel-prev,
+  .carousel-next {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .carousel-prev {
+    left: 10px;
+  }
+
+  .carousel-next {
+    right: 10px;
+  }
+
+  .ride-section,
+  .champion-section {
+    padding: 60px 0;
+  }
+
+  .countdown-card {
+    padding: 20px 12px;
+  }
+
+  .countdown-grid {
+    gap: 6px;
+  }
+
+  .countdown-item {
+    padding: 14px 3px;
+  }
+
+  .countdown-item strong {
+    font-size: 1.7rem;
+  }
+
+  .countdown-item span {
+    font-size: 0.59rem;
+    letter-spacing: 0;
+  }
+
+  .stats-section {
+    padding: 35px 0;
+  }
+
+  .stats-grid {
+    gap: 4px;
+  }
+
+  .stat-card {
+    padding: 10px 3px;
+  }
+
+  .stat-card strong {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+  }
+
+  .stat-card span {
+    font-size: 0.65rem;
+    letter-spacing: 0;
+  }
+
+  .about-image {
+    min-height: 270px;
+  }
+
+  .champion-card {
+    grid-template-columns: 1fr;
+  }
+
+  .champion-photo {
+    min-height: 290px;
+  }
+
+  .champion-info {
+    padding: 25px;
+  }
+
+  .leaders-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .leader-photo {
+    height: 300px;
+  }
+
+  .store-section {
+    padding: 10px 0 60px;
+  }
+
+  .store-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 30px 24px;
+  }
+
+  .store-icon {
+    align-self: flex-end;
+    font-size: 3.5rem;
+  }
+
+  .contact-section {
+    padding: 55px 0;
+  }
+
+  .contact-panel {
+    gap: 25px;
+    padding: 24px 18px;
+  }
+
+  .contact-detail {
+    align-items: flex-start;
+    padding: 12px;
+  }
+}
+
+/* ---------- ACCESIBILIDAD ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track,
+  .carousel-slide img,
+  .leader-card,
+  .leader-photo img,
+  .stat-card,
+  .about-image img {
+    transition: none;
+  }
+}
