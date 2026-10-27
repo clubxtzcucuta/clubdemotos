@@ -914,4 +914,205 @@ button:focus-visible {
         letter-spacing: 1px;
     }
 }
-```
+```css
+/* ==================================
+   RECONOCIMIENTO AL FUNDADOR
+================================== */
+
+.reconocimiento-fundador {
+    padding: 75px 5%;
+    background:
+        radial-gradient(ellipse at top, #291012 0%, #111 55%, #0a0a0a 100%);
+    color: #fff;
+}
+
+.fundador-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.fundador-encabezado {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.fundador-etiqueta {
+    color: #ff454d;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.fundador-encabezado h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900;
+    margin: 12px 0;
+}
+
+.fundador-encabezado h2 span {
+    color: #ff3038;
+}
+
+.fundador-encabezado p {
+    color: #bbb;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.fundador-tarjeta {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    background: #171717;
+    border: 1px solid #4b2023;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+}
+
+.fundador-foto {
+    position: relative;
+    min-height: 420px;
+    background: #222;
+    overflow: hidden;
+}
+
+.fundador-foto img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.fundador-sello {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 16px;
+    background: #d9232e;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.fundador-sello span {
+    font-size: 19px;
+}
+
+.fundador-contenido {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fundador-linea {
+    color: #ff454d;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.fundador-contenido h3 {
+    font-size: clamp(25px, 3vw, 36px);
+    line-height: 1.2;
+    margin: 12px 0;
+    font-weight: 900;
+    overflow-wrap: anywhere;
+}
+
+.fundador-contenido h4 {
+    color: #ff454d;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 0 0 18px;
+}
+
+.fundador-contenido p {
+    color: #c6c6c6;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0 0 15px;
+}
+
+.fundador-valores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 12px;
+}
+
+.fundador-valores span {
+    padding: 8px 12px;
+    border: 1px solid #76262b;
+    border-radius: 4px;
+    color: #ff656c;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.fundador-firma {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid #373737;
+}
+
+.fundador-firma span {
+    color: #999;
+    font-size: 12px;
+}
+
+.fundador-firma strong {
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* TABLET Y CELULAR */
+
+@media (max-width: 760px) {
+    .reconocimiento-fundador {
+        padding: 50px 5%;
+    }
+
+    .fundador-tarjeta {
+        grid-template-columns: 1fr;
+    }
+
+    .fundador-foto {
+        min-height: 0;
+        height: 340px;
+    }
+
+    .fundador-foto img {
+        min-height: 0;
+        height: 100%;
+    }
+
+    .fundador-contenido {
+        padding: 27px 22px;
+    }
+}
+
+@media (max-width: 420px) {
+    .fundador-foto {
+        height: 290px;
+    }
+
+    .fundador-contenido {
+        padding: 24px 17px;
+    }
+
+    .fundador-valores {
+        gap: 6px;
+    }
+}
