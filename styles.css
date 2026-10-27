@@ -609,3 +609,309 @@ button:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+```css
+/* =====================================
+   LEGADO DE CAMPEONES - CLUB XTZ CÚCUTA
+===================================== */
+
+.legado-campeones {
+    padding: 70px 5%;
+    background: #101010;
+    color: #fff;
+    overflow: hidden;
+}
+
+.legado-encabezado {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.legado-etiqueta {
+    display: inline-block;
+    color: #ff3038;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.legado-encabezado h2 {
+    font-size: clamp(27px, 4vw, 42px);
+    font-weight: 900;
+    margin: 0 0 15px;
+    letter-spacing: 1px;
+}
+
+.legado-encabezado h2 span {
+    color: #ff3038;
+}
+
+.legado-encabezado p {
+    color: #bdbdbd;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.campeones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-campeon {
+    position: relative;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.tarjeta-campeon:hover {
+    transform: translateY(-7px);
+    border-color: #ff3038;
+    box-shadow: 0 12px 30px rgba(255, 48, 56, 0.16);
+}
+
+.foto-campeon {
+    position: relative;
+    height: 280px;
+    background: #252525;
+    overflow: hidden;
+}
+
+.foto-campeon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta-campeon:hover .foto-campeon img {
+    transform: scale(1.05);
+}
+
+.anio-campeon {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    padding: 8px 15px;
+    background: #ff3038;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 900;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.info-campeon {
+    padding: 22px 18px;
+    text-align: center;
+    border-top: 3px solid #ff3038;
+}
+
+.distintivo-campeon {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #ff5057;
+    margin-bottom: 10px;
+}
+
+.info-campeon h3 {
+    font-size: 19px;
+    margin: 0 0 8px;
+    color: #fff;
+}
+
+.info-campeon p {
+    color: #999;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+/* CAMPEÓN ACTUAL */
+
+.campeon-actual {
+    border-color: #ff3038;
+    box-shadow: 0 0 20px rgba(255, 48, 56, 0.12);
+}
+
+.campeon-actual .info-campeon {
+    background: linear-gradient(180deg, #291113, #1a1a1a);
+}
+
+.campeon-actual .distintivo-campeon {
+    color: #ff3038;
+}
+
+/* TARJETA FUTURA 2027 */
+
+.tarjeta-futuro {
+    border-color: #5b1c20;
+    background: linear-gradient(145deg, #200d0f, #151515);
+}
+
+.foto-futuro {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 8px;
+    background:
+        radial-gradient(circle at center, #4a1117 0%, #21090c 50%, #141414 100%);
+    border-bottom: 1px solid #5b1c20;
+}
+
+.trofeo-futuro {
+    font-size: 65px;
+    filter: drop-shadow(0 0 15px rgba(255, 48, 56, 0.35));
+}
+
+.anio-futuro {
+    color: #ff3038;
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.interrogacion-futuro {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+    opacity: 0.6;
+}
+
+.distintivo-futuro {
+    display: inline-block;
+    color: #ff3038;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-futuro .info-campeon {
+    border-top: 3px solid #ff3038;
+}
+
+.tarjeta-futuro .info-campeon h3 {
+    font-size: 17px;
+}
+
+/* MENSAJE FINAL */
+
+.mensaje-legado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    text-align: center;
+    margin: 45px auto 0;
+    padding: 20px;
+    border-top: 1px solid #333;
+    max-width: 800px;
+}
+
+.mensaje-legado span {
+    color: #ff3038;
+    font-size: 22px;
+}
+
+.mensaje-legado p {
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .campeones-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .foto-campeon,
+    .foto-futuro {
+        height: 250px;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 520px) {
+    .legado-campeones {
+        padding: 50px 4%;
+    }
+
+    .campeones-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .foto-campeon,
+    .foto-futuro {
+        height: 175px;
+    }
+
+    .info-campeon {
+        padding: 16px 8px;
+    }
+
+    .info-campeon h3 {
+        font-size: 15px;
+    }
+
+    .info-campeon p {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+    .distintivo-campeon,
+    .distintivo-futuro {
+        font-size: 8px;
+        letter-spacing: 0.5px;
+    }
+
+    .anio-campeon {
+        top: 8px;
+        left: 8px;
+        padding: 6px 10px;
+        font-size: 15px;
+    }
+
+    .trofeo-futuro {
+        font-size: 45px;
+    }
+
+    .anio-futuro {
+        font-size: 28px;
+    }
+
+    .mensaje-legado {
+        gap: 8px;
+    }
+
+    .mensaje-legado p {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+}
+```
