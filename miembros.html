@@ -620,7 +620,7 @@
          INFORMACIÓN DE LOS 30 MIEMBROS
       ===================================== */
       const miembrosData = [
-        { nombre: "Edinson Avendaño", kilometraje: "5.000", moto: "XTZ 150 - AVENTIIR", sangre: "O+", profesion: "Empleado", ingreso: "25/08/2020" },
+        { nombre: "Edinson Avendaño", moto: "XTZ 150 - AVENTIIR", kilometraje: "5.000", profesion: "Empleado", ingreso: "25/08/2020" },
         { nombre: "Miembro 02", kilometraje: "5.000", moto: "XTZ cilindraje - nombre de moto", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
         { nombre: "Miembro 03", kilometraje: "5.000", moto: "XTZ cilindraje - nombre de moto", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
         { nombre: "Miembro 04", kilometraje: "5.000", moto: "XTZ cilindraje - nombre de moto", sangre: "Por confirmar", profesion: "Por confirmar", ingreso: "Por confirmar" },
@@ -670,7 +670,7 @@
         const encontrados = miembrosData.filter(function (miembro) {
           const texto = [
             miembro.nombre,
-            miembro.sangre,
+            miembro.kilometraje,
             miembro.profesion,
             miembro.ingreso,
             "miembro"
@@ -710,7 +710,7 @@
                   <i class="fa-solid fa-droplet"></i>
                   <div>
                     <small>Tipo de sangre</small>
-                    <p>${miembro.sangre}</p>
+                    <p>${miembro.kilometraje}</p>
                   </div>
                 </div>
 
