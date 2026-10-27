@@ -1,0 +1,646 @@
+
+/* =========================================
+   TARJETA DIGITAL - CLUB XTZ CÚCUTA
+   ========================================= */
+
+:root {
+    --rojo: #ed1c24;
+    --rojo-oscuro: #b80f18;
+    --negro: #080808;
+    --negro-card: #111111;
+    --blanco: #ffffff;
+    --gris: #a9a9a9;
+    --borde: rgba(255, 255, 255, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--blanco);
+    background: var(--negro);
+    font-family: "Montserrat", sans-serif;
+}
+
+/* FONDO GENERAL */
+
+.tarjeta-pagina {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 760px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 25px 24px 35px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 5, 5, 0.88),
+            rgba(5, 5, 5, 0.96) 35%,
+            #080808 75%
+        ),
+        url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1400&q=85")
+        center top / auto 650px no-repeat;
+}
+
+.fondo-tarjeta {
+    position: absolute;
+    z-index: -2;
+    top: 100px;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translateX(-50%);
+    background: radial-gradient(
+        circle,
+        rgba(237, 28, 36, 0.12),
+        transparent 68%
+    );
+    pointer-events: none;
+}
+
+.fondo-textura {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: 0.12;
+    background-image: repeating-linear-gradient(
+        135deg,
+        transparent,
+        transparent 45px,
+        rgba(255, 255, 255, 0.035) 46px,
+        transparent 47px
+    );
+    pointer-events: none;
+}
+
+/* ENCABEZADO */
+
+.tarjeta-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    max-width: 570px;
+    margin: 0 auto;
+}
+
+.tarjeta-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta-logo img {
+    display: block;
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(237, 28, 36, 0.15));
+}
+
+.tarjeta-oficial {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    color: #eeeeee;
+    border: 1px solid var(--borde);
+    border-radius: 30px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.tarjeta-oficial i {
+    color: var(--rojo);
+}
+
+/* PRESENTACIÓN */
+
+.tarjeta-presentacion {
+    position: relative;
+    max-width: 570px;
+    margin: 25px auto 35px;
+    text-align: center;
+}
+
+.tarjeta-insignia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 22px;
+    border: 1px solid rgba(237, 28, 36, 0.55);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.07),
+        rgba(0, 0, 0, 0.75) 70%
+    );
+    box-shadow:
+        0 0 0 8px rgba(255, 255, 255, 0.02),
+        0 0 35px rgba(237, 28, 36, 0.12);
+}
+
+.tarjeta-insignia img {
+    width: 135px;
+    height: 135px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+}
+
+.tarjeta-etiqueta {
+    display: block;
+    color: #bdbdbd;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.tarjeta-presentacion h1 {
+    margin-top: 10px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(48px, 10vw, 76px);
+    font-weight: 800;
+    line-height: 0.88;
+    letter-spacing: -1px;
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+}
+
+.tarjeta-presentacion h1 span {
+    color: var(--rojo);
+}
+
+.tarjeta-presentacion h1 strong {
+    display: block;
+    margin-top: 8px;
+    color: #f4f4f4;
+    font-weight: 800;
+}
+
+.tarjeta-linea {
+    width: 95px;
+    height: 3px;
+    margin: 23px auto 18px;
+    background: var(--rojo);
+    box-shadow: 0 0 15px rgba(237, 28, 36, 0.4);
+}
+
+.tarjeta-eslogan {
+    color: #eeeeee;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.tarjeta-eslogan strong {
+    color: var(--rojo);
+}
+
+.tarjeta-descripcion {
+    max-width: 440px;
+    margin: 12px auto 0;
+    color: var(--gris);
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+/* TÍTULOS DE SECCIÓN */
+
+.tarjeta-enlaces,
+.tarjeta-redes,
+.tarjeta-compartir {
+    max-width: 520px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.tarjeta-enlaces h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: #c9c9c9;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    text-align: center;
+}
+
+.tarjeta-enlaces h2 span {
+    width: 25px;
+    height: 1px;
+    background: var(--rojo);
+}
+
+/* BOTONES DE LA PÁGINA */
+
+.enlace-principal {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-height: 73px;
+    margin-bottom: 11px;
+    padding: 13px 16px;
+    overflow: hidden;
+    color: var(--blanco);
+    background: linear-gradient(
+        110deg,
+        rgba(28, 28, 28, 0.96),
+        rgba(14, 14, 14, 0.96)
+    );
+    border: 1px solid var(--borde);
+    border-left: 3px solid var(--rojo);
+    border-radius: 5px;
+    text-decoration: none;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.enlace-principal::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+    transform: skewX(-20deg);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.055),
+        transparent
+    );
+    transition: left 0.5s ease;
+    pointer-events: none;
+}
+
+.enlace-principal:hover::after {
+    left: 140%;
+}
+
+.enlace-principal:hover {
+    transform: translateY(-2px);
+    border-color: rgba(237, 28, 36, 0.65);
+    border-left-color: var(--rojo);
+    background: linear-gradient(
+        110deg,
+        rgba(65, 12, 15, 0.85),
+        rgba(17, 17, 17, 0.98)
+    );
+    box-shadow: 0 7px 22px rgba(237, 28, 36, 0.08);
+}
+
+.enlace-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    color: var(--rojo);
+    background: rgba(237, 28, 36, 0.08);
+    border: 1px solid rgba(237, 28, 36, 0.25);
+    border-radius: 4px;
+    font-size: 17px;
+}
+
+.enlace-texto {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.enlace-texto strong {
+    color: #f4f4f4;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.enlace-texto small {
+    color: #a4a4a4;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.enlace-flecha {
+    flex-shrink: 0;
+    color: #858585;
+    font-size: 12px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.enlace-principal:hover .enlace-flecha {
+    color: var(--rojo);
+    transform: translateX(3px);
+}
+
+/* REDES SOCIALES */
+
+.tarjeta-redes {
+    margin-top: 34px;
+    padding: 25px 15px;
+    text-align: center;
+    border-top: 1px solid var(--borde);
+    border-bottom: 1px solid var(--borde);
+}
+
+.tarjeta-redes h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.tarjeta-redes > p {
+    margin-top: 7px;
+    color: var(--gris);
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.redes-iconos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.red-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    color: #ffffff;
+    background: #181818;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 17px;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.red-icono:hover {
+    color: #ffffff;
+    background: var(--rojo);
+    border-color: var(--rojo);
+    transform: translateY(-4px);
+}
+
+/* COMPARTIR */
+
+.tarjeta-compartir {
+    margin-top: 22px;
+}
+
+.boton-compartir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 51px;
+    padding: 13px 18px;
+    color: #ffffff;
+    background: var(--rojo);
+    border: 1px solid var(--rojo);
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.boton-compartir:hover {
+    background: var(--rojo-oscuro);
+    transform: translateY(-2px);
+}
+
+.boton-compartir i {
+    font-size: 15px;
+}
+
+.mensaje-compartir {
+    min-height: 15px;
+    margin-top: 10px;
+    color: #bbbbbb;
+    font-size: 10px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* UBICACIÓN */
+
+.tarjeta-ubicacion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 520px;
+    margin: 12px auto 0;
+    padding: 17px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--borde);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.2s ease;
+}
+
+.tarjeta-ubicacion:hover {
+    border-color: rgba(237, 28, 36, 0.65);
+}
+
+.tarjeta-ubicacion > i:first-child {
+    color: var(--rojo);
+    font-size: 20px;
+}
+
+.tarjeta-ubicacion span {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.tarjeta-ubicacion strong {
+    font-size: 10px;
+    letter-spacing: 0.7px;
+}
+
+.tarjeta-ubicacion small {
+    color: var(--gris);
+    font-size: 9px;
+}
+
+.tarjeta-ubicacion > i:last-child {
+    color: #777777;
+    font-size: 11px;
+}
+
+/* PIE DE PÁGINA */
+
+.tarjeta-footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.footer-emblema {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 10px;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+.tarjeta-footer > p {
+    color: #eeeeee;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.footer-linea {
+    width: 45px;
+    height: 2px;
+    margin: 15px 0;
+    background: var(--rojo);
+}
+
+.tarjeta-footer > span {
+    color: #aaaaaa;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.tarjeta-footer > small {
+    margin-top: 8px;
+    color: #666666;
+    font-size: 8px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+/* TABLET Y CELULAR */
+
+@media (max-width: 480px) {
+    .tarjeta-pagina {
+        padding: 18px 16px 28px;
+    }
+
+    .tarjeta-logo img {
+        width: 53px;
+        height: 53px;
+    }
+
+    .tarjeta-oficial {
+        padding: 8px 10px;
+        font-size: 8px;
+    }
+
+    .tarjeta-presentacion {
+        margin-top: 28px;
+        margin-bottom: 30px;
+    }
+
+    .tarjeta-insignia {
+        width: 135px;
+        height: 135px;
+    }
+
+    .tarjeta-insignia img {
+        width: 115px;
+        height: 115px;
+    }
+
+    .tarjeta-etiqueta {
+        font-size: 8px;
+        letter-spacing: 1.8px;
+    }
+
+    .tarjeta-presentacion h1 {
+        font-size: clamp(46px, 12vw, 62px);
+    }
+
+    .tarjeta-eslogan {
+        font-size: 22px;
+    }
+
+    .tarjeta-descripcion {
+        font-size: 10px;
+    }
+
+    .enlace-principal {
+        gap: 11px;
+        min-height: 69px;
+        padding: 11px;
+    }
+
+    .enlace-icono {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+    }
+
+    .enlace-texto strong {
+        font-size: 10px;
+    }
+
+    .enlace-texto small {
+        font-size: 8px;
+    }
+
+    .redes-iconos {
+        gap: 10px;
+    }
+
+    .red-icono {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+}
+
+/* REDUCE ANIMACIONES SI EL DISPOSITIVO LO PREFIERE */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
