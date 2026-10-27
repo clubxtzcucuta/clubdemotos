@@ -1,0 +1,674 @@
+
+/* ==========================================
+   TIENDA CLUB XTZ CÚCUTA
+   ========================================== */
+
+:root {
+    --tienda-rojo: #e3262e;
+    --tienda-rojo-oscuro: #b91820;
+    --tienda-negro: #111111;
+    --tienda-gris: #1b1b1b;
+    --tienda-gris-claro: #f4f4f4;
+    --tienda-blanco: #ffffff;
+    --tienda-texto: #555555;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color: var(--tienda-negro);
+    background: #ffffff;
+}
+
+body.modal-abierto {
+    overflow: hidden;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.tienda-hero {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    overflow: hidden;
+    color: #ffffff;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.48)),
+        url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1800&q=85")
+        center 55% / cover no-repeat;
+}
+
+.tienda-hero::after {
+    content: "";
+    position: absolute;
+    right: -80px;
+    bottom: -130px;
+    width: 380px;
+    height: 380px;
+    border: 55px solid rgba(227, 38, 46, 0.18);
+    border-radius: 50%;
+}
+
+.tienda-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+}
+
+.tienda-etiqueta,
+.subtitulo-tienda {
+    display: inline-block;
+    color: var(--tienda-rojo);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.tienda-hero h1 {
+    margin: 15px 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(60px, 9vw, 110px);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: 2px;
+}
+
+.tienda-hero h1 span {
+    color: var(--tienda-rojo);
+}
+
+.tienda-hero-content p {
+    max-width: 560px;
+    color: #e2e2e2;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.btn-tienda {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 15px 23px;
+    color: #ffffff;
+    background: var(--tienda-rojo);
+    border: 2px solid var(--tienda-rojo);
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: 0.25s ease;
+}
+
+.btn-tienda:hover {
+    color: #ffffff;
+    background: var(--tienda-rojo-oscuro);
+    border-color: var(--tienda-rojo-oscuro);
+    transform: translateY(-3px);
+}
+
+/* PRESENTACIÓN */
+
+.tienda-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 25px 45px;
+    text-align: center;
+}
+
+.tienda-intro h2,
+.catalogo-cabecera h2 {
+    margin: 12px 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 800;
+}
+
+.tienda-intro h2 span,
+.catalogo-cabecera h2 span {
+    color: var(--tienda-rojo);
+}
+
+.tienda-intro p {
+    color: var(--tienda-texto);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* CATÁLOGO */
+
+.catalogo {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 35px 25px 90px;
+}
+
+.catalogo-cabecera {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.catalogo-cabecera h2 {
+    margin-bottom: 0;
+}
+
+.buscador-tienda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 270px;
+    padding: 12px 15px;
+    background: #f7f7f7;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+}
+
+.buscador-tienda i {
+    color: var(--tienda-rojo);
+}
+
+.buscador-tienda input {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.filtros-tienda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.filtro {
+    padding: 10px 19px;
+    color: #333333;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+}
+
+.filtro:hover,
+.filtro.activo {
+    color: #ffffff;
+    background: var(--tienda-rojo);
+    border-color: var(--tienda-rojo);
+}
+
+/* TARJETAS */
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.producto-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.045);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.producto-imagen {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background: #eeeeee;
+}
+
+.producto-imagen > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.producto-card:hover .producto-imagen > img {
+    transform: scale(1.05);
+}
+
+.producto-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    padding: 7px 10px;
+    color: #ffffff;
+    background: var(--tienda-rojo);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo-prenda {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    padding: 5px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%);
+}
+
+.logo-prenda img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo-prenda.logo-gorra {
+    top: 35%;
+    left: 52%;
+    width: 42px;
+    height: 42px;
+}
+
+.producto-info {
+    padding: 22px 20px 20px;
+}
+
+.producto-categoria {
+    color: var(--tienda-rojo);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.producto-info h3 {
+    margin: 9px 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.producto-info p {
+    min-height: 44px;
+    color: var(--tienda-texto);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.producto-pie {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #eeeeee;
+}
+
+.precio {
+    color: #555555;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.btn-consultar {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 13px;
+    color: #ffffff;
+    background: var(--tienda-negro);
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 800;
+    transition: background 0.2s ease;
+}
+
+.btn-consultar:hover {
+    background: var(--tienda-rojo);
+}
+
+.btn-consultar i {
+    font-size: 14px;
+}
+
+.sin-resultados {
+    padding: 35px;
+    color: #666666;
+    text-align: center;
+    background: #f7f7f7;
+    border-radius: 4px;
+}
+
+/* BANNER FINAL */
+
+.tienda-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 55px max(7%, calc((100% - 1150px) / 2));
+    color: #ffffff;
+    background:
+        linear-gradient(110deg, rgba(0, 0, 0, 0.97), rgba(30, 30, 30, 0.94));
+    border-top: 4px solid var(--tienda-rojo);
+}
+
+.tienda-banner > div > span {
+    color: var(--tienda-rojo);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.tienda-banner h2 {
+    margin: 12px 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(27px, 4vw, 40px);
+}
+
+.tienda-banner h2 strong {
+    color: var(--tienda-rojo);
+}
+
+.tienda-banner p {
+    color: #cccccc;
+    font-size: 12px;
+}
+
+.btn-banner {
+    flex-shrink: 0;
+}
+
+/* PIE DE PÁGINA */
+
+.site-footer {
+    color: #ffffff;
+    background: #080808;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 25px;
+}
+
+.footer-brand img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.footer-brand h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 25px;
+}
+
+.footer-brand h3 span {
+    color: var(--tienda-rojo);
+}
+
+.footer-brand p,
+.footer-grid > div > p {
+    color: #aaaaaa;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.footer-grid h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.footer-grid > div > a {
+    display: block;
+    width: fit-content;
+    margin: 12px 0;
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s ease;
+}
+
+.footer-grid > div > a:hover {
+    color: var(--tienda-rojo);
+}
+
+.footer-bottom {
+    padding: 18px 20px;
+    text-align: center;
+    border-top: 1px solid #252525;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #888888;
+    font-size: 10px;
+}
+
+/* VENTANA MODAL */
+
+.modal-tienda {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.78);
+}
+
+.modal-contenido {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    padding: 35px;
+    background: #ffffff;
+    border-top: 5px solid var(--tienda-rojo);
+    border-radius: 5px;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.3);
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 35px;
+    height: 35px;
+    color: #555555;
+    background: #f2f2f2;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-icono {
+    color: #25a45a;
+    font-size: 35px;
+}
+
+.modal-contenido h2 {
+    margin-bottom: 8px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 30px;
+}
+
+.modal-contenido > p {
+    margin-bottom: 25px;
+    color: var(--tienda-rojo);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.modal-contenido label {
+    display: block;
+    margin: 15px 0 7px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.modal-contenido input,
+.modal-contenido textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    color: #222222;
+    background: #fafafa;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    outline-color: var(--tienda-rojo);
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.modal-contenido textarea {
+    resize: vertical;
+}
+
+.btn-consulta-final {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    color: #ffffff;
+    background: var(--tienda-rojo);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.btn-consulta-final:hover {
+    background: var(--tienda-rojo-oscuro);
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .catalogo-cabecera {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .buscador-tienda {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .tienda-banner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 650px) {
+    .tienda-hero {
+        min-height: 430px;
+        padding: 55px 25px;
+    }
+
+    .tienda-hero h1 {
+        font-size: 64px;
+    }
+
+    .tienda-hero-content p {
+        font-size: 13px;
+    }
+
+    .tienda-intro {
+        padding: 60px 22px 30px;
+    }
+
+    .catalogo {
+        padding: 30px 18px 60px;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .producto-imagen {
+        height: 320px;
+    }
+
+    .producto-info {
+        padding: 20px;
+    }
+
+    .filtros-tienda {
+        gap: 7px;
+    }
+
+    .filtro {
+        padding: 9px 12px;
+        font-size: 10px;
+    }
+
+    .tienda-banner {
+        padding: 40px 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 40px 25px;
+    }
+
+    .modal-contenido {
+        padding: 28px 22px;
+    }
+}
