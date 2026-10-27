@@ -1,82 +1,328 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Contacto | CLUB XTZ CÚCUTA</title>
+
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="contacto.css">
-     <link rel="icon" type="image/png" href="XTZ.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-<header>
-    <div class="logo-header">
-        <img src="XTZ.png" alt="Logo">
-        <h1>CLUB XTZ CÚCUTA</h1>
-    </div>
+<header class="site-header">
+    <div class="header-container">
+        <a href="index.html" class="brand">
+            <img src="XTZ.png" alt="Logo Club XTZ">
+            <span>CLUB <strong>XTZ CÚCUTA</strong></span>
+        </a>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="el-club.html">El Club</a>
-        <a href="miembros.html">Miembros</a>
-        <a href="eventos.html">Eventos</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="clubxtz.html">El club</a>
+            <a href="miembros.html">Miembros</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="contacto.html" class="active">Contacto</a>
+        </nav>
+    </div>
 </header>
 
-<section class="contacto">
+<main>
 
-    <h2>ÚNETE AL CLUB</h2>
-    <p>¿Quieres rodar con nosotros? Contáctanos directamente.</p>
+    <!-- PORTADA -->
+    <section class="contacto-hero">
+        <div class="contacto-hero-overlay"></div>
 
-    <!-- BOTÓN WHATSAPP -->
-    <a href="https://wa.me/573001234567" target="_blank" class="btn-whatsapp">
-        📲 Escríbenos por WhatsApp
-    </a>
+        <div class="contacto-hero-contenido">
+            <span class="contacto-etiqueta">ESTAMOS PARA ESCUCHARTE</span>
 
-    <!-- REDES -->
-    <div class="redes">
+            <h1>HABLEMOS <span>XTZ</span></h1>
 
-        <img src="XTZ.png" class="logo-small" alt="logo">
+            <p>
+                ¿Quieres conocer el club, participar en nuestras rodadas
+                o hacer parte de esta familia? Estamos listos para conocerte.
+            </p>
 
-        <div class="icons">
+            <a href="#formularioContacto" class="btn-contacto">
+                CONTÁCTANOS
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
 
-            <a href="#" target="_blank">
-                <img src="tik tok.png" alt="TikTok">
+    <!-- INTRODUCCIÓN -->
+    <section class="contacto-intro">
+        <span class="contacto-subtitulo">CONECTAMOS CONTIGO</span>
+        <h2>UNA PASIÓN QUE <span>NOS UNE</span></h2>
+        <p>
+            En el CLUB XTZ CÚCUTA creemos que cada ruta comienza con una conversación.
+            Escríbenos para resolver tus dudas, conocer nuestras actividades
+            o consultar cómo unirte al club.
+        </p>
+    </section>
+
+    <!-- TARJETAS DE CONTACTO -->
+    <section class="contacto-canales">
+
+        <article class="canal-card">
+            <div class="canal-icono">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>Comunícate con nosotros de forma directa.</p>
+            <a href="#" id="whatsappDirecto" class="canal-enlace">
+                ESCRIBIR AHORA <i class="fas fa-arrow-right"></i>
+            </a>
+        </article>
+
+        <article class="canal-card">
+            <div class="canal-icono">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Ubicación</h3>
+            <p>Cúcuta, Norte de Santander, Colombia.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=C%C3%BAcuta+Norte+de+Santander"
+               target="_blank" rel="noopener" class="canal-enlace">
+                VER UBICACIÓN <i class="fas fa-arrow-right"></i>
+            </a>
+        </article>
+
+        <article class="canal-card">
+            <div class="canal-icono">
+                <i class="fas fa-motorcycle"></i>
+            </div>
+            <h3>Únete al club</h3>
+            <p>Comparte con nosotros la pasión por las motos y las rutas.</p>
+            <a href="#formularioContacto" class="canal-enlace">
+                QUIERO UNIRME <i class="fas fa-arrow-right"></i>
+            </a>
+        </article>
+
+    </section>
+
+    <!-- FORMULARIO -->
+    <section class="contacto-formulario-seccion" id="formularioContacto">
+
+        <div class="contacto-formulario-info">
+            <span class="contacto-subtitulo">ENVÍANOS UN MENSAJE</span>
+
+            <h2>CUÉNTANOS <span>QUÉ NECESITAS</span></h2>
+
+            <p>
+                Completa el formulario y prepararemos tu mensaje para que puedas
+                enviarlo directamente por WhatsApp al club.
+            </p>
+
+            <div class="contacto-beneficio">
+                <i class="fas fa-check-circle"></i>
+                <span>Consultas generales sobre el club.</span>
+            </div>
+
+            <div class="contacto-beneficio">
+                <i class="fas fa-check-circle"></i>
+                <span>Información sobre rodadas y eventos.</span>
+            </div>
+
+            <div class="contacto-beneficio">
+                <i class="fas fa-check-circle"></i>
+                <span>Información para nuevos integrantes.</span>
+            </div>
+
+            <div class="contacto-frase">
+                <i class="fas fa-quote-left"></i>
+                <p>Más que motos, una familia.</p>
+            </div>
+        </div>
+
+        <form class="formulario-contacto" id="formContacto">
+
+            <div class="formulario-titulo">
+                <h3>FORMULARIO DE CONTACTO</h3>
+                <p>Los campos marcados con * son obligatorios.</p>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre"
+                       placeholder="Escribe tu nombre" required maxlength="100">
+            </div>
+
+            <div class="formulario-dos-columnas">
+                <div class="campo-formulario">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono"
+                           placeholder="Tu número de contacto" maxlength="25">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo"
+                           placeholder="correo@ejemplo.com" maxlength="150">
+                </div>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="motivo">Motivo de contacto *</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Quiero unirme al club">Quiero unirme al club</option>
+                    <option value="Información sobre rodadas">Información sobre rodadas</option>
+                    <option value="Información sobre eventos">Información sobre eventos</option>
+                    <option value="Consulta sobre la tienda">Consulta sobre la tienda</option>
+                    <option value="Propuesta de colaboración">Propuesta de colaboración</option>
+                    <option value="Otro asunto">Otro asunto</option>
+                </select>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="mensaje">Tu mensaje *</label>
+                <textarea id="mensaje" name="mensaje" rows="5"
+                          placeholder="Escribe aquí tu mensaje..."
+                          required maxlength="1500"></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar-contacto">
+                <i class="fab fa-whatsapp"></i>
+                PREPARAR MENSAJE POR WHATSAPP
+            </button>
+
+            <p class="aviso-formulario">
+                Al continuar, WhatsApp se abrirá con tu mensaje preparado
+                para que puedas revisarlo y enviarlo.
+            </p>
+        </form>
+
+    </section>
+
+    <!-- REDES SOCIALES -->
+    <section class="contacto-redes">
+        <span class="contacto-subtitulo">SÍGUENOS EN EL CAMINO</span>
+        <h2>ENCUÉNTRANOS EN <span>REDES SOCIALES</span></h2>
+        <p>Comparte nuestra pasión y mantente al tanto de las novedades del club.</p>
+
+        <div class="redes-botones">
+
+            <!-- Reemplaza # por los enlaces reales de las redes del club -->
+            <a href="#" class="red-social instagram" aria-label="Instagram del club">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
             </a>
 
-            <a href="#" target="_blank">
-                <img src="instagram.svg" alt="Instagram">
+            <a href="#" class="red-social facebook" aria-label="Facebook del club">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
             </a>
 
-            <a href="#" target="_blank">
-                <img src="facebook.webp" alt="Facebook">
+            <a href="#" class="red-social tiktok" aria-label="TikTok del club">
+                <i class="fab fa-tiktok"></i>
+                <span>TikTok</span>
             </a>
 
-            <a href="#" target="_blank">
-                <img src="Youtube.png" alt="YouTube">
-            </a>
+        </div>
+    </section>
 
+    <!-- CIERRE -->
+    <section class="contacto-banner">
+        <div>
+            <span>CLUB XTZ CÚCUTA</span>
+            <h2>LAS MEJORES HISTORIAS <strong>COMIENZAN EN LA RUTA</strong></h2>
+            <p>Nos vemos en el camino. Siempre unidos por la misma pasión.</p>
+        </div>
+
+        <img src="XTZ.png" alt="Logo CLUB XTZ CÚCUTA">
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+
+        <div class="footer-brand">
+            <img src="XTZ.png" alt="Logo CLUB XTZ CÚCUTA">
+            <h3>CLUB XTZ <span>CÚCUTA</span></h3>
+            <p>Más que motos, una familia.</p>
+        </div>
+
+        <div>
+            <h4>Explora</h4>
+            <a href="index.html">Inicio</a>
+            <a href="clubxtz.html">El club</a>
+            <a href="miembros.html">Miembros</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="tienda.html">Tienda</a>
+        </div>
+
+        <div>
+            <h4>Contacto</h4>
+            <a href="#formularioContacto">Envíanos un mensaje</a>
+            <p>Cúcuta, Norte de Santander, Colombia.</p>
         </div>
 
     </div>
 
-</section>
-
-<div class="social-bar">
-
-    <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-
-</div>
-
-    
-<footer>
-    <p>© 2026 CLUB XTZ CÚCUTA</p>
+    <div class="footer-bottom">
+        <p>© 2026 CLUB XTZ CÚCUTA. Todos los derechos reservados.</p>
+    </div>
 </footer>
-    
+
+<script>
+    /*
+      IMPORTANTE:
+      Cambia este número por el WhatsApp real del club.
+      Usa el indicativo del país, sin +, espacios ni guiones.
+      Ejemplo de formato para Colombia: 573001234567
+    */
+    const numeroWhatsApp = "573000000000";
+
+    const whatsappDirecto = document.getElementById("whatsappDirecto");
+
+    whatsappDirecto.href =
+        "https://wa.me/" + numeroWhatsApp +
+        "?text=" + encodeURIComponent(
+            "Hola, CLUB XTZ CÚCUTA. Quisiera recibir información sobre el club."
+        );
+
+    whatsappDirecto.target = "_blank";
+    whatsappDirecto.rel = "noopener";
+
+    document.getElementById("formContacto").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const nombre = document.getElementById("nombre").value.trim();
+        const telefono = document.getElementById("telefono").value.trim();
+        const correo = document.getElementById("correo").value.trim();
+        const motivo = document.getElementById("motivo").value;
+        const mensaje = document.getElementById("mensaje").value.trim();
+
+        if (!nombre || !motivo || !mensaje) {
+            alert("Por favor, completa los campos obligatorios.");
+            return;
+        }
+
+        let texto = "Hola, CLUB XTZ CÚCUTA. Quiero ponerme en contacto con ustedes.\n\n";
+        texto += "Nombre: " + nombre + "\n";
+
+        if (telefono) texto += "Teléfono: " + telefono + "\n";
+        if (correo) texto += "Correo: " + correo + "\n";
+
+        texto += "Motivo: " + motivo + "\n";
+        texto += "Mensaje: " + mensaje;
+
+        const url = "https://wa.me/" + numeroWhatsApp +
+                    "?text=" + encodeURIComponent(texto);
+
+        window.open(url, "_blank");
+    });
+</script>
+
 </body>
 </html>
