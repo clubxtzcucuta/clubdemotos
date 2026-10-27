@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda | CLUB XTZ CÚCUTA</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tienda.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-container">
+        <a href="index.html" class="brand">
+            <img src="XTZ.png" alt="Logo Club XTZ">
+            <span>CLUB <strong>XTZ CÚCUTA</strong></span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="clubxtz.html">El club</a>
+            <a href="miembros.html">Miembros</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="tienda.html" class="active">Tienda</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- PORTADA DE LA TIENDA -->
+    <section class="tienda-hero">
+        <div class="tienda-hero-overlay"></div>
+
+        <div class="tienda-hero-content">
+            <span class="tienda-etiqueta">EQUIPAMIENTO OFICIAL DEL CLUB</span>
+
+            <h1>TIENDA <span>XTZ</span></h1>
+
+            <p>
+                Lleva los colores del club contigo.
+                Estilo, pasión y espíritu motero en cada prenda.
+            </p>
+
+            <a href="#catalogo" class="btn-tienda">
+                EXPLORAR PRODUCTOS
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- PRESENTACIÓN -->
+    <section class="tienda-intro">
+        <span class="subtitulo-tienda">NUESTRA IDENTIDAD</span>
+        <h2>VISTE LOS COLORES <span>XTZ</span></h2>
+        <p>
+            Encuentra prendas y accesorios inspirados en la pasión
+            por las motos, la hermandad y las aventuras del CLUB XTZ CÚCUTA.
+        </p>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="catalogo" id="catalogo">
+
+        <div class="catalogo-cabecera">
+            <div>
+                <span class="subtitulo-tienda">COLECCIÓN DEL CLUB</span>
+                <h2>NUESTROS <span>PRODUCTOS</span></h2>
+            </div>
+
+            <div class="buscador-tienda">
+                <i class="fas fa-search"></i>
+                <input type="search" id="buscarProducto"
+                       placeholder="Buscar producto...">
+            </div>
+        </div>
+
+        <div class="filtros-tienda">
+            <button class="filtro activo" data-categoria="todos">Todos</button>
+            <button class="filtro" data-categoria="camisetas">Camisetas</button>
+            <button class="filtro" data-categoria="polos">Polos</button>
+            <button class="filtro" data-categoria="gorras">Gorras</button>
+            <button class="filtro" data-categoria="chaquetas">Chaquetas</button>
+            <button class="filtro" data-categoria="accesorios">Accesorios</button>
+        </div>
+
+        <div class="productos-grid" id="productosGrid">
+
+            <article class="producto-card" data-categoria="camisetas">
+                <div class="producto-imagen">
+                    <span class="producto-badge">REFERENCIA</span>
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80"
+                         alt="Camiseta negra de referencia">
+                    <div class="logo-prenda">
+                        <img src="XTZ.png" alt="Logo XTZ">
+                    </div>
+                </div>
+
+                <div class="producto-info">
+                    <span class="producto-categoria">CAMISETAS</span>
+                    <h3>Camiseta XTZ clásica</h3>
+                    <p>Camiseta de estilo motero para lucir los colores del club.</p>
+                    <div class="producto-pie">
+                        <span class="precio">Precio por confirmar</span>
+                        <button class="btn-consultar" data-producto="Camiseta XTZ clásica">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card" data-categoria="polos">
+                <div class="producto-imagen">
+                    <span class="producto-badge">REFERENCIA</span>
+                    <img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?auto=format&fit=crop&w=700&q=80"
+                         alt="Polo de referencia">
+                    <div class="logo-prenda">
+                        <img src="XTZ.png" alt="Logo XTZ">
+                    </div>
+                </div>
+
+                <div class="producto-info">
+                    <span class="producto-categoria">POLOS</span>
+                    <h3>Polo institucional XTZ</h3>
+                    <p>Una opción elegante para reuniones y actividades del club.</p>
+                    <div class="producto-pie">
+                        <span class="precio">Precio por confirmar</span>
+                        <button class="btn-consultar" data-producto="Polo institucional XTZ">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card" data-categoria="gorras">
+                <div class="producto-imagen">
+                    <span class="producto-badge">REFERENCIA</span>
+                    <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=700&q=80"
+                         alt="Gorra negra de referencia">
+                    <div class="logo-prenda logo-gorra">
+                        <img src="XTZ.png" alt="Logo XTZ">
+                    </div>
+                </div>
+
+                <div class="producto-info">
+                    <span class="producto-categoria">GORRAS</span>
+                    <h3>Gorra XTZ</h3>
+                    <p>Complementa tu estilo motero con los colores del club.</p>
+                    <div class="producto-pie">
+                        <span class="precio">Precio por confirmar</span>
+                        <button class="btn-consultar" data-producto="Gorra XTZ">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card" data-categoria="chaquetas">
+                <div class="producto-imagen">
+                    <span class="producto-badge">REFERENCIA</span>
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=80"
+                         alt="Chaqueta de referencia">
+                    <div class="logo-prenda">
+                        <img src="XTZ.png" alt="Logo XTZ">
+                    </div>
+                </div>
+
+                <div class="producto-info">
+                    <span class="producto-categoria">CHAQUETAS</span>
+                    <h3>Chaqueta estilo XTZ</h3>
+                    <p>Una prenda con carácter para los amantes de las rutas.</p>
+                    <div class="producto-pie">
+                        <span class="precio">Precio por confirmar</span>
+                        <button class="btn-consultar" data-producto="Chaqueta estilo XTZ">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card" data-categoria="accesorios">
+                <div class="producto-imagen">
+                    <span class="producto-badge">REFERENCIA</span>
+                    <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=700&q=80"
+                         alt="Prenda y accesorios de referencia">
+                    <div class="logo-prenda">
+                        <img src="XTZ.png" alt="Logo XTZ">
+                    </div>
+                </div>
+
+                <div class="producto-info">
+                    <span class="producto-categoria">ACCESORIOS</span>
+                    <h3>Accesorios del club</h3>
+                    <p>Complementos para acompañarte en tus aventuras.</p>
+                    <div class="producto-pie">
+                        <span class="precio">Precio por confirmar</span>
+                        <button class="btn-consultar" data-producto="Accesorios del club">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card" data-categoria="camisetas">
+                <div class="producto-imagen">
+                    <span class="producto-badge">REFERENCIA</span>
+                    <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=700&q=80"
+                         alt="Camiseta de referencia">
+                    <div class="logo-prenda">
+                        <img src="XTZ.png" alt="Logo XTZ">
+                    </div>
+                </div>
+
+                <div class="producto-info">
+                    <span class="producto-categoria">CAMISETAS</span>
+                    <h3>Camiseta edición ruta</h3>
+                    <p>Diseño casual inspirado en la comunidad motera.</p>
+                    <div class="producto-pie">
+                        <span class="precio">Precio por confirmar</span>
+                        <button class="btn-consultar" data-producto="Camiseta edición ruta">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="sin-resultados" id="sinResultados" hidden>
+            No encontramos productos con esa búsqueda.
+        </p>
+    </section>
+
+    <!-- BANNER FINAL -->
+    <section class="tienda-banner">
+        <div>
+            <span>UNA PASIÓN, UNA FAMILIA</span>
+            <h2>EL ESPÍRITU XTZ <strong>NOS UNE</strong></h2>
+            <p>Consulta disponibilidad, tallas y próximos productos.</p>
+        </div>
+
+        <a href="contacto.html" class="btn-tienda btn-banner">
+            CONTACTAR AL CLUB
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="XTZ.png" alt="Logo CLUB XTZ CÚCUTA">
+            <h3>CLUB XTZ <span>CÚCUTA</span></h3>
+            <p>Más que motos, una familia.</p>
+        </div>
+
+        <div>
+            <h4>Explora</h4>
+            <a href="index.html">Inicio</a>
+            <a href="clubxtz.html">El club</a>
+            <a href="miembros.html">Miembros</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="tienda.html">Tienda</a>
+        </div>
+
+        <div>
+            <h4>Contacto</h4>
+            <a href="contacto.html">Contáctanos</a>
+            <p>Cúcuta, Norte de Santander</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 CLUB XTZ CÚCUTA. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- VENTANA DE CONSULTA -->
+<div class="modal-tienda" id="modalTienda" hidden>
+    <div class="modal-contenido">
+        <button class="modal-cerrar" id="cerrarModal" aria-label="Cerrar">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <i class="fab fa-whatsapp modal-icono"></i>
+        <h2>Consulta tu producto</h2>
+        <p id="productoSeleccionado"></p>
+
+        <label for="nombreCliente">Tu nombre</label>
+        <input type="text" id="nombreCliente" placeholder="Escribe tu nombre">
+
+        <label for="mensajeCliente">Mensaje</label>
+        <textarea id="mensajeCliente" rows="3"
+                  placeholder="Quiero consultar disponibilidad y tallas"></textarea>
+
+        <button class="btn-consulta-final" id="enviarConsulta">
+            CONTINUAR POR WHATSAPP
+        </button>
+    </div>
+</div>
+
+<script>
+    // FILTROS Y BUSCADOR
+    const botonesFiltro = document.querySelectorAll(".filtro");
+    const productos = document.querySelectorAll(".producto-card");
+    const buscador = document.getElementById("buscarProducto");
+    const sinResultados = document.getElementById("sinResultados");
+
+    let categoriaActual = "todos";
+
+    function filtrarProductos() {
+        const texto = buscador.value.toLowerCase().trim();
+        let visibles = 0;
+
+        productos.forEach(producto => {
+            const categoria = producto.dataset.categoria;
+            const contenido = producto.textContent.toLowerCase();
+
+            const coincideCategoria =
+                categoriaActual === "todos" || categoria === categoriaActual;
+
+            const coincideTexto = contenido.includes(texto);
+            const mostrar = coincideCategoria && coincideTexto;
+
+            producto.hidden = !mostrar;
+
+            if (mostrar) visibles++;
+        });
+
+        sinResultados.hidden = visibles > 0;
+    }
+
+    botonesFiltro.forEach(boton => {
+        boton.addEventListener("click", () => {
+            botonesFiltro.forEach(b => b.classList.remove("activo"));
+            boton.classList.add("activo");
+
+            categoriaActual = boton.dataset.categoria;
+            filtrarProductos();
+        });
+    });
+
+    buscador.addEventListener("input", filtrarProductos);
+
+    // MODAL DE CONSULTA
+    const modal = document.getElementById("modalTienda");
+    const productoSeleccionado = document.getElementById("productoSeleccionado");
+    const mensajeCliente = document.getElementById("mensajeCliente");
+
+    let productoActual = "";
+
+    document.querySelectorAll(".btn-consultar").forEach(boton => {
+        boton.addEventListener("click", () => {
+            productoActual = boton.dataset.producto;
+            productoSeleccionado.textContent = productoActual;
+            mensajeCliente.value = "Hola, quiero consultar disponibilidad, tallas y precio de " + productoActual + ".";
+            modal.hidden = false;
+            document.body.classList.add("modal-abierto");
+        });
+    });
+
+    function cerrarModal() {
+        modal.hidden = true;
+        document.body.classList.remove("modal-abierto");
+    }
+
+    document.getElementById("cerrarModal").addEventListener("click", cerrarModal);
+
+    modal.addEventListener("click", evento => {
+        if (evento.target === modal) cerrarModal();
+    });
+
+    document.addEventListener("keydown", evento => {
+        if (evento.key === "Escape") cerrarModal();
+    });
+
+    document.getElementById("enviarConsulta").addEventListener("click", () => {
+        const nombre = document.getElementById("nombreCliente").value.trim();
+        const mensaje = mensajeCliente.value.trim();
+
+        if (!mensaje) {
+            alert("Escribe tu consulta antes de continuar.");
+            return;
+        }
+
+        // Reemplaza este número por el WhatsApp del club,
+        // incluyendo el indicativo del país, sin + ni espacios.
+        const numeroWhatsApp = "573000000000";
+
+        const texto = "Hola, soy " + (nombre || "un interesado") +
+            ". Estoy consultando por: " + productoActual + ". " + mensaje;
+
+        const url = "https://wa.me/" + numeroWhatsApp +
+            "?text=" + encodeURIComponent(texto);
+
+        window.open(url, "_blank");
+    });
+</script>
+
+</body>
+</html>
